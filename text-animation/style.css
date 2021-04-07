@@ -1,0 +1,148 @@
+.regular-animation .oh{
+    opacity: 0;
+    animation-name: r-oh;
+    animation-duration: .5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.regular-animation {
+    border-top: black solid;
+}
+.regular-animation .my{
+    opacity: 0;
+    animation-name: r-my;
+    animation-duration: .5s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+.regular-animation .god{
+    opacity: 0;
+    animation-name: r-my;
+    animation-duration: .5s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+.regular-animation .text{
+    opacity: 0;
+    animation-name: r-text;
+    animation-duration: .5s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+.flashy-animation {
+    padding-top: 2em;
+    border-bottom: black solid;
+}
+.flashy-animation .oh{
+    opacity: 0;
+    font-size: .5em;
+    animation-name: f-oh;
+    animation-duration: .5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.flashy-animation .my{
+    opacity: 0;
+    font-size: .8em;
+    animation-name: f-my;
+    animation-duration: .5s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.flashy-animation .god{
+    position: relative;
+    display: inline-block;
+    opacity: 0;
+    color: brown;
+    font-size: 1.5em;
+    animation-name: f-god;
+    animation-duration: .5s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.flashy-animation .text{
+    opacity: 0;
+    font-size: 1em;
+    animation-name: f-text;
+    animation-duration: .5s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+
+
+@keyframes r-oh {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes r-my {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes r-god {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes r-text {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes f-oh {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes f-my {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes f-god {
+    0% {
+        transform: translateY(0px);
+        opacity: 0;
+    }
+    75% {
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes f-text {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

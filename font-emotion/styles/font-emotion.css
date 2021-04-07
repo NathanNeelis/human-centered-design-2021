@@ -1,0 +1,223 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+header {
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+    background-image: url(../img/header.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 0px;
+}
+
+header h1 {
+    position: relative;
+    font-family: 'Kiwi Maru', serif;
+    text-shadow: 3px 1px 1px rgba(31, 31, 31, 0.75);
+    color: white;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 3em;
+    text-align: center;
+    align-self: end;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+header p {
+    font-family: 'Noto Sans JP', sans-serif;
+    text-shadow: 1px 1px 1px rgba(31, 31, 31, 0.75);
+    color: white;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+header p a {
+    font-family: inherit;
+    text-decoration: inherit;
+    color: inherit;
+    font-weight: 700;
+}
+
+nav {
+    background-color: rgb(240, 240, 240);
+    margin-bottom: 4rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding-left: 0;
+}
+
+nav ul li {
+    font-weight: bold;
+}
+
+nav ul li.active,
+nav ul li:hover {
+    background-color: rgb(32, 32, 32);
+    color: white;
+}
+
+nav ul li a {
+    display: block;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    margin: 0;
+    color: black;
+    padding: 0.8rem 1rem;
+}
+
+nav ul li.active a,
+nav ul li:hover a {
+    color: white;
+}
+
+section:not(.banner) {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 3em 2em;
+}
+
+section:not(.banner) h2 {
+    font-family: 'Kiwi Maru', serif;
+    margin-bottom: 1.5em;
+    font-size: 1.8em;
+}
+
+section:not(.banner) p {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.2em;
+}
+
+section.banner {
+    height: 40vh;
+    position: relative;
+    width: 100vw;
+    background-image: url(../img/header.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#emotions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#emotions div {
+    margin: 10px 0;
+}
+
+#emotions div p {
+    padding: 5px 10px;
+    margin: 10px 0;
+    border-radius: 3px;
+    width: min-content;
+    font-size: 1em;
+    color: white;
+}
+
+#emotions div.red p {
+    background-color: rgb(214, 0, 0);
+}
+
+#emotions div.orange p {
+    background-color: rgb(255, 139, 31);
+}
+
+#emotions div.yellow p {
+    background-color: rgb(231, 221, 74);
+}
+
+#emotions div.green p {
+    background-color: rgb(79, 216, 0);
+}
+
+#emotions div.blue p {
+    background-color: rgb(0, 174, 255);
+}
+
+#emotions div.pink p {
+    background-color: rgb(247, 0, 255);
+}
+
+#emotions div.purple p {
+    background-color: rgb(157, 0, 189);
+}
+
+#emotions div.brown p {
+    background-color: rgb(110, 50, 0);
+}
+
+#emotions div.black p {
+    background-color: rgb(0, 0, 0);
+}
+
+#emotions div.white p {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(85, 85, 85);
+    color: black;
+}
+
+#examples {
+    position: relative;
+    padding: 0;
+}
+
+#examples p {
+    background-color: rgb(241, 241, 241);
+    border-radius: 20px;
+    padding: 10px 15px;
+    max-width: 70%;
+    margin: 20px auto;
+}
+
+#examples p.left {
+    margin-left: 0;
+}
+
+#examples p.right {
+    margin-right: 0;
+}
+
+span {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
+span.black {
+    text-decoration-color: black;
+}
+
+span.orange {
+    text-decoration-color: rgb(255, 139, 31);
+}
+
+span.yellow {
+    text-decoration-color: rgb(231, 221, 74);
+}
+
+span.blue {
+    text-decoration-color: rgb(0, 174, 255);
+}

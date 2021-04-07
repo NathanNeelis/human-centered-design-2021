@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: #D42D42;
+    --darkblue: #2C4774;
+    --darkorange: #BD8E05;
+    --darkgray: #333;
+    --lightgray: #ebebeb;
+
+    --fontRoboto: 'Roboto', sans-serif;
+    --fontPlayFair: 'Playfair Display', serif;
+    --fontGloria: 'Gloria Hallelujah', cursive;
+}
+
+html {
+    font-family: var(--fontRoboto);
+}
+
+main {
+    width: min(40rem, 90%);
+    margin: 0 auto;
+}
+
+nav {
+    background-color: rgb(240, 240, 240);
+    margin-bottom: 4rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding-left: 0;
+}
+
+nav ul li {
+    font-weight: bold;
+}
+
+nav ul li.active,
+nav ul li:hover {
+    background-color: rgb(32, 32, 32);
+    color: white;
+}
+
+nav ul li a {
+    display: block;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    margin: 0;
+    color: black;
+    padding: 0.8rem 1rem;
+}
+
+nav ul li.active a,
+nav ul li:hover a {
+    color: white;
+}
+
+header {
+    background: var(--lightgray);
+    padding-bottom: 1rem;
+}
+
+header h1 {
+    text-align: center;
+    padding-top: 2rem;
+    color: var(--darkgray);
+}
+
+header section {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+header section input {
+    margin: 0 1rem;
+}
+
+header section label {
+    margin-right: 1rem;
+}
+
+header section article {
+    margin: 0 2rem 2rem 2rem;
+}
+
+article {
+    margin: 2rem 0;
+}
+
+article p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+main article span {
+    font-weight: bold;
+}
+
+header button {
+    display: block;
+    background: var(--darkgray);
+    border: none;
+    color: white;
+    padding: .5rem 1rem;
+    margin: 0 auto;
+    transition: all .5s ease;
+}
+
+header button:hover {
+    background: var(--red);
+}
+
+.ira {
+    color: var(--darkorange);
+}
+
+.victoria {
+    color: var(--darkblue);
+}
+
+.angelique {
+    color: var(--red);
+}

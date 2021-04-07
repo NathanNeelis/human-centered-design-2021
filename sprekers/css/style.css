@@ -1,0 +1,127 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+/* grid */
+
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  max-width: 1400px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.nogrid {
+  display: block;
+}
+
+.nogrid p {
+  max-width: 45rem;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+nav {
+  background-color: rgb(240, 240, 240);
+  margin-bottom: 4rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding-left: 0;
+}
+
+nav ul li {
+  font-weight: bold;
+}
+
+nav ul li.active,
+nav ul li:hover {
+  background-color: rgb(32, 32, 32);
+  color: white;
+}
+
+nav ul li a {
+  display: block;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  margin: 0;
+  color: black;
+  padding: 0.8rem 1rem;
+}
+
+nav ul li.active a,
+nav ul li:hover a {
+  color: white;
+}
+
+
+img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+.message {
+  max-width: 700px;
+  background-color: rgb(224, 224, 224);
+  border-radius: 10px;
+  display: flex;
+  margin: 1em;
+  padding: 1em;
+  align-items: center;
+}
+
+p {
+  margin: 10px;
+}
+
+strong {
+  font-size: 1.1em;
+}
+
+.person {
+  min-width: 125px;
+}
+
+.person p {
+  font-weight: 700;
+}
+
+.sidebar .wrapper {
+  position: sticky;
+  top: 1rem;
+}
+
+body.switched img {
+  display: none;
+}
+
+body.switched .sidebar {
+  display: none;
+}
+
+body.switched .container {
+  grid-template-columns: 1fr;
+}
+
+button {
+  width: 300px;
+  padding: 0.5em;
+  margin-bottom: 2em;
+}
+
+button:active {
+  background-color: rgb(37, 37, 37);
+  color: white;
+}
+
+hr {
+  margin: 3rem 0;
+}
