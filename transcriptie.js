@@ -12,7 +12,7 @@ const transcriptie = [{
     },
     {
         reader: "Espen",
-        content: "...I really like web materials, i'm surprised – i'm surprised there'sno podcast called web materials or web fabric or any of these other other incarnations"
+        content: "...I really like web materials, i'm surprised – i'm surprised there's no podcast called web materials or web fabric or any of these other other incarnations"
     },
     {
         reader: "Vasilis",
