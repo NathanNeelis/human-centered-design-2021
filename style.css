@@ -11,6 +11,9 @@
     --darkgray: #333;
     --lightgray: #ebebeb;
 
+
+    --darkmode: #121212;
+
     --fontRoboto: 'Roboto', sans-serif;
     --fontPlayFair: 'Playfair Display', serif;
     --fontGloria: 'Gloria Hallelujah', cursive;
@@ -91,7 +94,7 @@ header button:hover {
 
 main {
     width: min(40rem, 90%);
-    margin: 6rem auto 0 auto;
+    margin: 5rem auto 0 auto;
     font-size: 22px;
     line-height: 33px;
 }
@@ -206,4 +209,53 @@ nav ul li {
 nav ul li a {
     /* text-decoration: none; */
     color: #333;
+}
+
+
+
+/* DARK MODE  */
+@media screen and (prefers-color-scheme: dark) {
+    html {
+        background: var(--darkmode);
+    }
+
+    nav ul li a {
+        color: white;
+    }
+
+    button {
+        background: white;
+        color: #333;
+    }
+
+    #optionsToggle {
+        background: #404040;
+        color: white;
+    }
+
+    .box {
+        background: #404040;
+    }
+
+    main p {
+        background: var(--darkmode);
+        color: white;
+    }
+
+    main p:nth-child(even) {
+        background: #181818;
+    }
+
+    header {
+        background: #404040;
+        color: white;
+    }
+
+    header h1 {
+        color: white;
+    }
+
+    header.active #optionsToggle {
+        background: var(--red);
+    }
 }

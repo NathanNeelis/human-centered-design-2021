@@ -9,7 +9,7 @@ const vasilisIcon = document.querySelector('.roundVasilis')
 // vasilisIcon.textContent = '...'
 var offset = 0;
 var index = -1;
-const espenIcon = document.querySelector('.roundEspen')
+
 
 
 vasilisIcon.addEventListener('click', changeText)
@@ -18,33 +18,46 @@ espenIcon.addEventListener('click', changeText)
 function changeText() {
     index++;
     index %= transcriptie.length
-    // text.innerHTML = texts[index];
 
-    console.log(transcriptie[index].reader)
 
     if (transcriptie[index].reader === 'Vasilis') {
-        espenIcon.classList.remove('inactive')
-        vasilisIcon.classList.add('inactive')
+        vasilisIcon.classList.add('waiting');
+        vasilisIcon.textContent = '...'
     } else if (transcriptie[index].reader === 'Espen') {
-        espenIcon.classList.add('inactive')
-        vasilisIcon.classList.remove('inactive')
+        espenIcon.classList.add('waiting');
+        espenIcon.textContent = '...'
     }
 
+    // timeout of 2 seconds to simulate talking
+    setTimeout(function () {
 
-    // print messages
-    let contentWrap = document.createElement("p");
-    let reader = document.createElement("span")
-    reader.classList.add(transcriptie[index].reader)
+        if (transcriptie[index].reader === 'Vasilis') {
+            espenIcon.classList.remove('inactive')
+            vasilisIcon.classList.add('inactive')
+            vasilisIcon.textContent = 'Vasilis'
+            vasilisIcon.classList.remove('waiting')
+        } else if (transcriptie[index].reader === 'Espen') {
+            espenIcon.classList.add('inactive')
+            vasilisIcon.classList.remove('inactive')
+            espenIcon.textContent = 'Espen'
+            espenIcon.classList.remove('waiting')
+        }
 
-    contentBox.appendChild(contentWrap).appendChild(reader)
-    reader.textContent = transcriptie[index].reader + ': '
+        // print messages
+        let contentWrap = document.createElement("p");
+        let reader = document.createElement("span")
+        reader.classList.add(transcriptie[index].reader)
 
-    let text = document.createTextNode(transcriptie[index].content);
-    contentWrap.appendChild(text)
+        contentBox.appendChild(contentWrap).appendChild(reader)
+        reader.textContent = transcriptie[index].reader + ': '
+
+        let text = document.createTextNode(transcriptie[index].content);
+        contentWrap.appendChild(text)
 
 
-    // auto scrolling
-    contentBox.scrollTop = contentBox.scrollHeight;
+        // auto scrolling
+        contentBox.scrollTop = contentBox.scrollHeight;
+    }, 2000);
 }
 
 
