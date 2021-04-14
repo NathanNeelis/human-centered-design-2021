@@ -185,7 +185,7 @@ main p span {
 }
 
 .instructions {
-    color: white;
+    color: #333;
     font-size: 80%;
 }
 
@@ -214,6 +214,15 @@ nav ul li {
 nav ul li a {
     /* text-decoration: none; */
     color: #333;
+}
+
+.box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.box::-webkit-scrollbar-thumb {
+    background: var(--red);
+    border-radius: 3px;
 }
 
 
@@ -263,4 +272,14 @@ nav ul li a {
     header.active #optionsToggle {
         background: var(--red);
     }
+
+    .instructions {
+        color: white;
+    }
+
+
+
+    /* .box::-webkit-scrollbar-track {
+        background: var(--darkmode);
+    } */
 }
