@@ -131,7 +131,7 @@ main p span {
 .box {
     display: block;
     /* width: min(40rem, 100%); */
-    height: 40vw;
+    height: 65vh;
     /* margin: 6rem auto 0 auto; */
     background-color: lightgray;
     overflow-y: scroll;
@@ -182,6 +182,11 @@ main p span {
 .waiting {
     animation: pulse 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation-iteration-count: infinite;
+}
+
+.instructions {
+    color: white;
+    font-size: 80%;
 }
 
 @keyframes pulse {

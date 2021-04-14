@@ -5,6 +5,8 @@ const contentBox = document.querySelector('.box')
 
 
 const vasilisIcon = document.querySelector('.roundVasilis')
+const espenIcon = document.querySelector('.roundEspen')
+const instructions = document.querySelector('.instructions')
 // vasilisIcon.classList.add('waiting');
 // vasilisIcon.textContent = '...'
 var offset = 0;
@@ -19,7 +21,6 @@ function changeText() {
     index++;
     index %= transcriptie.length
 
-
     if (transcriptie[index].reader === 'Vasilis') {
         vasilisIcon.classList.add('waiting');
         vasilisIcon.textContent = '...'
@@ -30,6 +31,12 @@ function changeText() {
 
     // timeout of 2 seconds to simulate talking
     setTimeout(function () {
+
+        if (index < 1) {
+            instructions.textContent = "Now click the right speaker icon to continue the dialog"
+        } else if (index >= 1) {
+            instructions.textContent = "";
+        }
 
         if (transcriptie[index].reader === 'Vasilis') {
             espenIcon.classList.remove('inactive')
@@ -59,33 +66,3 @@ function changeText() {
         contentBox.scrollTop = contentBox.scrollHeight;
     }, 2000);
 }
-
-
-// transcriptie.forEach(function (message) {
-
-//     if (message.reader === 'Vasilis') {
-//         vasilisIcon.addEventListener('click', sendContent)
-//     } else if (message.reader === 'Espen') {
-//         espenIcon.addEventListener('click', sendContent)
-//     }
-
-//     function sendContent() {
-//         // print messages
-//         let contentWrap = document.createElement("p");
-//         let reader = document.createElement("span")
-//         reader.classList.add(message.reader)
-
-//         contentBox.appendChild(contentWrap).appendChild(reader)
-//         reader.textContent = message.reader + ': '
-
-//         let text = document.createTextNode(message.content);
-//         contentWrap.appendChild(text)
-
-
-//         // auto scrolling
-//         contentBox.scrollTop = contentBox.scrollHeight;
-//     }
-
-// });
-
-// }
