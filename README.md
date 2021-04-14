@@ -1,8 +1,8 @@
 # Human Centered Design @cmda-minor-web 2021
 Readme will be made over here
 
-
-
+resource: https://stackoverflow.com/questions/51096633/display-elements-of-an-array-one-by-one-in-order-on-event-click  
+resource: https://codeburst.io/50-shades-of-dark-mode-gray-d3e9907b1194  
 
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
