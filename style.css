@@ -212,8 +212,13 @@ nav ul li {
 }
 
 nav ul li a {
-    /* text-decoration: none; */
+    text-decoration: none;
+    border-bottom: 1px solid #333;
     color: #333;
+}
+
+nav ul li a.activeEnvironment {
+    border-color: var(--red);
 }
 
 .box::-webkit-scrollbar {
