@@ -2,9 +2,9 @@ const slider = document.getElementById("fontRange");
 const sliderLH = document.getElementById("lineHeightRange");
 const target = document.querySelectorAll(".box");
 
-console.log('this is target', target)
+// console.log('this is target', target)
 
-console.log(target)
+// console.log(target)
 
 slider.oninput = () => {
     target.forEach(element => {

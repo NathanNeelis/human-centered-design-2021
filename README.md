@@ -1,9 +1,29 @@
 # Human Centered Design @cmda-minor-web 2021
-Readme will be made over here
+Readme will be made over here  
+  
+resource: https://stackoverflow.com/questions/51096633/display-elements-of-an-array-one-by-one-in-order-on-event-click    
+resource: https://codeburst.io/50-shades-of-dark-mode-gray-d3e9907b1194    
 
-resource: https://stackoverflow.com/questions/51096633/display-elements-of-an-array-one-by-one-in-order-on-event-click  
-resource: https://codeburst.io/50-shades-of-dark-mode-gray-d3e9907b1194  
 
+
+## Project status 
+* [x] Prototype 1: using font & sizes  
+* [x] Test report 1 added to Wiki
+* [x] Prototype 2: Simulating podcasting
+* [x] Test report 2 added to Wiki
+* [ ] Timing functionality improvement
+* [ ] Adding podcast information
+* [ ] Fixing scroll top begin dialog instead of bottom 
+* [ ] add equalizer animation for speakers
+* [ ] Brainstorming: new experiment: What do I still want to test?
+* [ ] Prototype 3: 
+* [ ] Test report 3 added to Wiki
+* [ ] Finish project application
+* [ ] Write a readme
+
+
+Nice to have
+* [ ]  API to convert audio to JSON format
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
 

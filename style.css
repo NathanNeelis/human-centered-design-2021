@@ -209,6 +209,7 @@ nav ul {
 nav ul li {
     list-style: none;
     padding: 0 1rem 1rem 1rem;
+    font-size: 0.8rem;
 }
 
 nav ul li a {
