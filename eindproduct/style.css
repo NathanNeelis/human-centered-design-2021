@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: #D42D42;
+    --darkblue: #2C4774;
+    --darkorange: #BD8E05;
+    --darkgray: #333;
+    --lightgray: #ebebeb;
+
+
+    --darkmode: #121212;
+
+    --fontRoboto: 'Roboto', sans-serif;
+    --fontPlayFair: 'Playfair Display', serif;
+    --fontGloria: 'Gloria Hallelujah', cursive;
+}
+
+html {
+    font-family: var(--fontRoboto);
+    overflow-x: hidden;
+}
+
+
+
+header {
+    background: var(--lightgray);
+    /* padding-bottom: 1rem; */
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    transform: translateY(-15.5rem);
+    transition: all .5s ease;
+}
+
+header.active {
+    /* position: relative; */
+    transform: translateY(0rem);
+}
+
+header h1 {
+    text-align: center;
+    padding-top: 2rem;
+    color: var(--darkgray);
+}
+
+header section {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+header section input {
+    margin: 0 1rem;
+}
+
+header section label {
+    margin-right: 1rem;
+}
+
+header section article {
+    margin: 0 2rem;
+}
+
+button {
+    display: block;
+    background: var(--darkgray);
+    border: none;
+    color: white;
+    padding: .5rem 1rem;
+    margin: 0 auto;
+    transition: all .5s ease;
+}
+
+header button:hover {
+    background: var(--red);
+}
+
+#optionsToggle {
+    width: 100%;
+    margin-top: 2rem;
+    height: 2.5rem;
+}
+
+/* transcript  */
+
+main {
+    width: min(40rem, 90%);
+    margin: 5rem auto 0 auto;
+    font-size: 22px;
+    line-height: 33px;
+}
+
+main p {
+    margin: 2rem auto;
+
+    padding: 1rem;
+    background: var(--lightgray);
+    border-radius: .25rem;
+    width: 90%;
+}
+
+main p:nth-child(even) {
+    background: #f3f3f3;
+}
+
+.speakerE,
+.speakerV {
+    font-weight: bold;
+}
+
+.speakerE {
+    color: var(--darkorange);
+}
+
+.speakerV {
+    color: var(--red);
+}
+
+.testClass {
+    color: green;
+}
+
+audio {
+    display: none;
+}
+
+.box {
+    display: block;
+    /* width: min(40rem, 100%); */
+    height: 65vh;
+    /* margin: 6rem auto 0 auto; */
+    background-color: lightgray;
+    overflow-y: scroll;
+}
+
+.roundels {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.roundVasilis {
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--red);
+    border-radius: 50%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+.roundEspen {
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--darkorange);
+    border-radius: 50%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+.inactive {
+    background: gray;
+}
+
+#start {
+    border-radius: .2rem;
+    margin-bottom: 1rem;
+}
+
+.waiting {
+    animation: pulse 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation-iteration-count: infinite;
+}
+
+.instructions {
+    color: #333;
+    font-size: 80%;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0 1rem 1rem 1rem;
+    font-size: 0.8rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+    color: #333;
+}
+
+nav ul li a.activeEnvironment {
+    border-color: var(--red);
+}
+
+.box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.box::-webkit-scrollbar-thumb {
+    background: var(--red);
+    border-radius: 3px;
+}
+
+
+
+/* DARK MODE  */
+@media screen and (prefers-color-scheme: dark) {
+    html {
+        background: var(--darkmode);
+    }
+
+    nav ul li a {
+        color: white;
+    }
+
+    button {
+        background: white;
+        color: #333;
+    }
+
+    #optionsToggle {
+        background: #404040;
+        color: white;
+    }
+
+    .box {
+        background: #404040;
+    }
+
+    main p {
+        background: var(--darkmode);
+        color: white;
+    }
+
+    main p:nth-child(even) {
+        background: #181818;
+    }
+
+    header {
+        background: #404040;
+        color: white;
+    }
+
+    header h1 {
+        color: white;
+    }
+
+    header.active #optionsToggle {
+        background: var(--red);
+    }
+
+    .instructions {
+        color: white;
+    }
+
+}
+
+
+.bgYellow {
+    background: yellow;
+}
+
+/* .message {
+    opacity: 1;
+}
+
+.message0,
+.message1,
+.message2,
+.message3,
+.message4,
+.message5,
+.message6,
+.message7 {
+    animation-name: animateMessage;
+    animation-duration: .5s;
+    animation-play-state: paused;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+.message0 .show {
+    animation-play-state: play;
+}
+
+.message1 .show {
+    animation-play-state: play;
+}
+
+.message2 .show {
+    animation-play-state: play;
+}
+
+.message3 .show {
+    animation-play-state: play;
+}
+
+.message4 .show {
+    animation-play-state: play;
+}
+
+.message5 .show {
+    animation-play-state: play;
+}
+
+.message6 .show {
+    animation-play-state: play;
+}
+
+.message7 .show {
+    animation-play-state: play;
+}
+
+@keyframes animateMessage {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+} */
+
+
+
+
+/* @keyframes animationOne {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+} */

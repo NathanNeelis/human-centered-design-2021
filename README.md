@@ -11,7 +11,7 @@ resource: https://codeburst.io/50-shades-of-dark-mode-gray-d3e9907b1194
 * [x] Test report 1 added to Wiki
 * [x] Prototype 2: Simulating podcasting
 * [x] Test report 2 added to Wiki
-* [ ] Timing functionality improvement
+* [x] Timing functionality improvement
 * [ ] Adding podcast information
 * [ ] Fixing scroll top begin dialog instead of bottom 
 * [ ] add equalizer animation for speakers
@@ -24,6 +24,33 @@ resource: https://codeburst.io/50-shades-of-dark-mode-gray-d3e9907b1194
 
 Nice to have
 * [ ]  API to convert audio to JSON format
+
+To DO list 22-04  
+* [x] Adapt font & sizes
+* [x] Dialog box 
+* [x] text reading over time
+* [x] Adding styles to text reading
+* [ ] Maybe make the styling pretty?
+* [ ] Dialogs over time?
+* [x] Active dialog in view
+* [ ] Make speaker icons
+* [ ] Animate speaker icons
+* [ ] Add podcast information
+* [ ] Style the audio box (play - pauze)
+* [ ] Add nuances
+* [ ] Add silences
+
+
+
+## Resources
+[contains](https://www.javascripttutorial.net/dom/css/check-if-an-element-contains-a-class/)  
+[play audio](https://stackoverflow.com/questions/9419263/how-to-play-audio)  
+[scroll into view](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView)  
+[audio trimmer](https://audiotrimmer.com/)  
+[color words](https://stackoverflow.com/questions/43150490/how-to-highlight-the-transcript-of-a-audio-file)  
+[podcast Vasilis](https://webmaterials.design/posts/01-hello-world/)  
+[mouth shapes](https://www.freepik.com/vectors/education) Education vector created by pch.vector - www.freepik.com  
+[lip sync](https://www.youtube.com/watch?v=VKDMpZzhCp0)  
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
 

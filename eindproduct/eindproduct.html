@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Podcasts 2.0</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+
+    <!-- scripts  -->
+    <script src="transcriptie.js" defer></script>
+    <script src="fontsize-script.js" defer></script>
+    <script src="scriptTwo.js" defer></script>
+
+    <!-- fonts  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="optionsHeader">
+        <article class="options">
+            <h1>Font and sizes</h1>
+            <section>
+                <article>
+                    <input type="range" min="10" max="40" step="1" value="22" id="fontRange">
+                    <p>Letter grootte is: <span id="targetedFontSize">22 px</span></p>
+                </article>
+                <article>
+                    <input type="range" min="10" max="60" step="1" value="33" id="lineHeightRange">
+                    <p>Interlinie is: <span id="targetedLineHeight">33 px</span></p>
+                </article>
+            </section>
+            <section>
+                <input type="radio" id="Roboto" name="font" value="Roboto" checked>
+                <label for="Roboto">Roboto (sans-serif)</label>
+                <input type="radio" id="playFair" name="font" value="playFair">
+                <label for="playFair">Play Fair (serif)</label>
+                <input type="radio" id="gloria" name="font" value="gloria">
+                <label for="gloria">Something different</label>
+            </section>
+            <button id="resetButton">reset</button>
+            <button id="optionsToggle">Show font options</button>
+        </article>
+    </header>
+    <main>
+        <!-- podcast transcription vasilis  -->
+        <!-- <nav>
+            <ul>
+                <li><a href="index.html">Overzicht</a></li>
+                <li><a href="../font-size/fontsize.html" target="_blank">Prototype 1</a></li>
+                <li><a href="prototype2_test1.html" class="activeEnvironment">Prototype 2: Test 1</a></li>
+                <li><a href="prototype2_test2.html">Prototype 2: Test 2</a></li>
+                <li><a href="prototype3.html">Prototype 3</a></li>
+            </ul>
+        </nav> -->
+        <section>
+            <audio id="adi" controls>
+                <source src="sounds/podcast-short.mp3">
+                </source>
+            </audio>
+
+            <div class="box">
+                <!-- <p class="message message1">
+                    <span class='espen'>Espen:</span>
+                    <span class="words" id="ts0"> ...I </span>
+                    <span class="words" id="ts0.500">really</span>
+                    <span class="words" id="ts1.000"> like </span>
+                    <span class="words" id="ts1.500"> web materials,</span>
+
+                </p> -->
+                <p class="message message0">
+                    <!-- <span class='vasilis'>Vasilis:</span> -->
+                    <span class="words smile" id="ts0.000"> Intro music </span>
+                </p>
+
+                <p class="message message1">
+                    <span class='speakerV vasilis smile' id="ts5.600">Vasilis:</span>
+                    <span class="words vasilis aei" id="ts6.000"> Web </span>
+                    <span class="words vasilis neutral" id="ts6.300"> materials! </span>
+                    <span class="words vasilis smile" id="ts6.600"> </span>
+                </p>
+
+                <p class="message message2">
+                    <span class='speakerE espen smile' id="ts7.600">Espen:</span>
+                    <span class="words espen aei" id="ts8.000">Is </span>
+                    <span class="words espen thl" id="ts8.200">that </span>
+                    <span class="words espen qw" id="ts8.400">what </span>
+                    <span class="words espen aei" id="ts8.600">we’re</span>
+                    <span class="words espen neutral" id="ts8.800">calling</span>
+                    <span class="words espen thl" id="ts9.000">it?</span>
+                    <span class="espen smile" id="ts9.300"> </span>
+                </p>
+
+                <p class="message message3">
+                    <span class='speakerV vasilis smile' id="ts10.900">Vasilis:</span>
+                    <span class="words vasilis neutral" id="ts11.000">Yeah, </span>
+                    <span class="words vasilis aei" id="ts11.200">I </span>
+                    <span class="words vasilis thl" id="ts11.400">think </span>
+                    <span class="words vasilis thl" id="ts11.600">that’s </span>
+                    <span class="words vasilis qw" id="ts11.800">what </span>
+                    <span class="words vasilis aei" id="ts12.000">we’re </span>
+                    <span class="words vasilis neutral" id="ts12.200">calling </span>
+                    <span class="words vasilis thl" id="ts12.400">it. </span>
+                    <span class="words vasilis smile" id="ts12.700"> </span>
+                </p>
+
+                <p class="message message4">
+                    <span class='speakerE espen smile' id="ts13.100">Espen:</span>
+                    <span class="words espen aei" id="ts13.400">...I </span>
+                    <span class="words espen neutral" id="ts13.600">really </span>
+                    <span class="words espen aei" id="ts13.800">like </span>
+                    <span class="words espen qw" id="ts14.000">web </span>
+                    <span class="words espen neutral" id="ts14.300">materials, </span>
+                    <span class="words espen aei" id="ts15.200">i'm </span>
+                    <span class="words espen smile" id="ts15.400">surprised - </span>
+                    <span class="words espen aei" id="ts16.600">i'm </span>
+                    <span class="words espen thl" id="ts16.800">surprised </span>
+                    <span class="words espen neutral" id="ts17.000">there's </span>
+                    <span class="words espen oMouth" id="ts17.200">no </span>
+                    <span class="words espen thl" id="ts17.400">podcast </span>
+                    <span class="words espen neutal" id="ts17.600">called </span>
+                    <span class="words espen aei" id="ts18.400">web </span>
+                    <span class="words espen smile" id="ts18.700">materials </span>
+                    <span class="words espen oMouth" id="ts20.000">or </span>
+                    <span class="words espen neutral" id="ts20.200">web fabric </span>
+                    <span class="words espen oMouth" id="ts20.400">or </span>
+                    <span class="words espen aei" id="ts20.600">any </span>
+                    <span class="words espen fv" id="ts20.800">of </span>
+                    <span class="words espen smile" id="ts21.000">these </span>
+                    <span class="words espen thl" id="ts22.200">other </span>
+                    <span class="words espen neutral" id="ts22.400">other </span>
+                    <span class="words espen smile" id="ts23.500">incarnations </span>
+                    <!-- <span class="words" id="ts23.700"></span> -->
+                    <!-- <span class="words" id="ts0"> </span> -->
+                </p>
+
+                <p class="message message5">
+                    <span class='speakerV vasilis smile' id="ts24.400">Vasilis:</span>
+
+                    <span class="words vasilis aei" id="ts24.500">Yeah, </span>
+                    <span class="words vasilis oMouth" id="ts24.800">but </span>
+                    <span class="words vasilis aei" id="ts25.100">then </span>
+                    <span class="words vasilis neutral" id="ts25.400">we're </span>
+                    <span class="words vasilis thl" id="ts25.700">surprised </span>
+                    <span class="words vasilis oMouth" id="ts26.000">not </span>
+                    <span class="words vasilis aei" id="ts26.300">many </span>
+                    <span class="words vasilis neutral" id="ts26.600">people </span>
+                    <span class="words vasilis aei" id="ts26.900">are </span>
+                    <span class="words vasilis neutral" id="ts27.200">interested </span>
+                    <span class="words vasilis aei" id="ts27.500">in </span>
+                    <span class="words vasilis thl" id="ts27.800">the </span>
+                    <span class="words vasilis neutral" id="ts28.100">material </span>
+                    <span class="words vasilis oMouth" id="ts28.400">of </span>
+                    <span class="words vasilis thl" id="ts28.700">the </span>
+                    <span class="words vasilis aei" id="ts28.900">web </span>
+                    <span class="words vasilis smile" id="ts29.100">so... </span>
+
+                </p>
+
+                <p class="message message6">
+                    <span class='speakerE espen smile' id="ts29.400">Espen:</span>
+
+                    <span class="words espen thl" id="ts29.600">This </span>
+                    <span class="words espen aei" id="ts29.900">is </span>
+                    <span class="words espen thl" id="ts30.200">true, </span>
+                    <span class="words espen thl" id="ts30.700">this </span>
+                    <span class="words espen aei" id="ts31.000">is </span>
+                    <span class="words espen smile" id="ts31.300">true. </span>
+                    <span class="words espen oMouth" id="ts33.100">So, </span>
+                    <span class="words espen neutral" id="ts33.400">should </span>
+                    <span class="words espen aei" id="ts33.700">we </span>
+                    <span class="words espen neutral" id="ts34.000">start </span>
+                    <span class="words espen qw" id="ts34.300">by </span>
+                    <span class="words espen neutral" id="ts35.300">introducing </span>
+                    <span class="words espen fv" id="ts35.600">ourselves </span>
+                    <span class="words espen aei" id="ts35.900">a </span>
+                    <span class="words espen neutral" id="ts36.200">bit? </span>
+                    <span class="words espen smile" id="ts36.500"> </span>
+                </p>
+
+                <p class="message message7">
+                    <span class='speakerV vasilis smile' id="ts37.400">Vasilis:</span>
+
+                    <span class="words vasilis aei" id="ts37.500">Yes, </span>
+                    <span class="words vasilis oMouth" id="ts37.800">go </span>
+                    <span class="words vasilis neutral" id="ts38.100">ahead </span>
+                    <span class="words vasilis aei" id="ts38.400">Espen, </span>
+                    <span class="words vasilis oMouth" id="ts38.700">who </span>
+                    <span class="words vasilis neutral" id="ts39.000">are </span>
+                    <span class="words vasilis oMouth" id="ts39.300">you? </span>
+                    <span class="words vasilis smile" id="ts39.600"> </span>
+                </p>
+            </div>
+
+            <div class="roundels">
+                <div class="roundVasilis">
+                    <svg x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
+                        <style type="text/css">
+                            .st0 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #E9D2AF;
+                                stroke: #3F2D10;
+                            }
+
+                            .st1 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #372416;
+                                stroke: #120A04;
+                            }
+
+                            .st2 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #6F5E51;
+                            }
+
+                            .st3 {
+                                fill: none;
+                                stroke: #3F2D10;
+                                display: none;
+                            }
+
+                            .st4 {
+                                display: none;
+                            }
+
+                            .st5 {
+                                display: inline;
+                                fill: #372416;
+                            }
+
+                            .st6 {
+                                display: inline;
+                                fill: #DD3D59;
+                            }
+
+                            .st7 {
+                                display: inline;
+                                fill: #FFF5F0;
+                            }
+
+                            .st8 {
+                                display: inline;
+                            }
+
+                            .st9 {
+                                fill: #6F5E51;
+                            }
+
+                            .st10 {
+                                fill: #372416;
+                            }
+
+                            .st11 {
+                                fill: #FFF5F0;
+                            }
+
+                            .st12 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: #FFFFFF;
+                                stroke: #333333;
+                            }
+
+                            .st13 {
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                stroke: #000000;
+                            }
+
+                            .st14 {
+                                display: inline;
+                                fill-rule: evenodd;
+                                clip-rule: evenodd;
+                                fill: none;
+                                stroke: #333333;
+                            }
+
+                            .showItem {
+                                display: inline;
+                            }
+                        </style>
+                        <g id="svg2"">
+                            <sodipodi:namedview bordercolor=" #666666" borderopacity="1.0" gridtolerance="10000"
+                            guidetolerance="10" id="base" inkscape:current-layer="layer1" inkscape:cx="202.19689"
+                            inkscape:cy="64" inkscape:document-units="px" inkscape:pageopacity="0.0"
+                            inkscape:pageshadow="2" inkscape:window-height="961" inkscape:window-width="1538"
+                            inkscape:window-x="21" inkscape:window-y="39" inkscape:zoom="1" objecttolerance="10"
+                            pagecolor="#ffffff" showgrid="false">
+                            </sodipodi:namedview>
+                            <g id="g3779" transform="translate(-98.921516,-24.251691)">
+                            </g>
+                            <path id="path2649" sodipodi:nodetypes="ccccccc" class="st0"
+                                d="M44.9,14.8c1.4,4.8-0.6,10.5-1.9,15.2c1.8,5.9,1.6,11.2-4,15.9
+                            c-6.4,2.1-20.2,3.1-22.4-6c-1.4-11.4,1.1-4.8-1.5-14.3C14.3,13.2,18.7,4.9,30.3,5.7C38.3,5.5,41.7,9.6,44.9,14.8z" />
+                            <path id="path3359" class="st1" d="M40.4,18.1c0,0-7.2-4.5-7.1-2.6S40.4,18.2,40.4,18.1z" />
+                            <path id="path2704" sodipodi:nodetypes="ccc" class="st0"
+                                d="M31,27.1c0.6,1.8,1.4,6.9-3.8,5.6c-1-3.6,0.4-6.6,1.9-7.5" />
+                            <path id="path2708" sodipodi:nodetypes="cc" class="st0"
+                                d="M15.9,19.9c-7.4-3-4.3,7.2-0.2,6" />
+                            <path id="path2710" sodipodi:nodetypes="cs" class="st0"
+                                d="M14.9,21.5c-2.1-1.6-2.9,1.6,0.2,3" />
+                            <path id="path2743" sodipodi:nodetypes="cc" class="st0"
+                                d="M43.4,22c7.7-1.9,3.3,7.7-0.7,6" />
+                            <path id="path2745" sodipodi:nodetypes="cs" class="st0"
+                                d="M44.2,23.6c2.3-1.3,2.7,2-0.6,2.9" />
+                            <path id="path3351" sodipodi:nodetypes="cscccccccc" class="st1" d="M31.2,6.5c-2.1-3.4,1.2-6.9,8-2.9C56.6,14,43.4,48.6,50,54.1
+                            c-3.2-0.2-5,4.7-4.4,4.5c0.1-6.9-4.7-13.1-5-2.2c-4-7.7,4.2-13.2,2.7-21.6c-0.6,3.8-0.7,7.2-3.6,9.2c4.1-15.3,3.4-27.7-4.2-35.9
+                            c2.8,3.9,2.7,6.8,3,9.9C37.2,13.3,35.8,8.5,31.2,6.5z" />
+                            <path id="path3361" class="st1"
+                                d="M18.9,18.1c0,0,7.2-4.5,7.1-2.6C25.8,17.5,18.9,18.2,18.9,18.1z" />
+                            <path id="path3353" sodipodi:nodetypes="ccccccccsc" class="st1" d="M29.3,6.8c2.7-7.7-11.7-4.1-16.1,6C10.4,22.9,9,39.4,9.5,45.3
+                            s2.6,8.4,2.6,8.4c-1-4.5-2.3-9.1-0.1-10.4l3.2,12.4c-0.2-4.6-2.6-9.8-0.4-13.9c2.1-2.5,2.6,4.9,2.2,5.4c1.2-1.5,2.4-10.6,0.1-12.6
+                            C14.9,32.4,18.8,3.9,29.3,6.8z" />
+                            <path id="path3363" sodipodi:nodetypes="cccc" class="st2" d="M39.2,11.6c9.6,2.2,3.7,29.9,1.4,31.3C43.2,32.4,43.4,21,40,13.1
+                            L39.2,11.6z" />
+                            <path id="path3365" sodipodi:nodetypes="cccc" class="st2" d="M18.5,16.4c-4.3,7.3-3.8,14.2-5,21.3c1.1-6.9-4.8-15.1,5.2-22.9
+                            L18.5,16.4z" />
+                            <path id="path3367" sodipodi:nodetypes="cccc" class="st2" d="M35.7,2.5c7.6,6,7.3,5.7,9.6,11.8c-2.8-5-7.1-7.9-12.5-11.4L35.7,2.5
+                            z" />
+                            <path id="path3369" sodipodi:nodetypes="cccc" class="st2" d="M44.9,36.4c7.6,6-0.9,13.9,1.4,20c-2.8-5,1.8-13.7-1.8-19.3
+                            L44.9,36.4z" />
+                        </g>
+                        <g id="Mouths">
+                            <path id="Smile" sodipodi:nodetypes="cc" class="st3"
+                                d="M33.1,40.1c-1.2-1.8-5.9-1.8-7,0.9" />
+                            <g id="AEI" class="st4">
+                                <path class="st5"
+                                    d="M34.7,39.5c-0.7-1.5-1.5-2-2.1-2.2c-1-0.3-1.4,0.4-2.9,0.4c-1.7,0-2.2-0.8-3.3-0.4c-0.5,0.2-1.2,0.7-1.7,2.1
+                                c0.5,0.6,1.5,1.7,3,2c0.9,0.2,1.8,0.2,2.1,0.2c0.2,0,0.9,0,1.5-0.2C32.9,41.1,34,40.2,34.7,39.5z" />
+                                <path class="st6" d="M27.5,40.3c0,0,1.7-1.7,4,0.1C31.5,40.4,29.2,41.5,27.5,40.3z" />
+                                <path class="st7" d="M26.2,37.4c0.5-0.3,1-0.2,1.3-0.2c1.3,0.1,2.2,0.2,3.1,0.1c0,0,1-0.1,1.9,0c0.1,0,0.2,0,0.4,0.1
+                                c0.3,0.1,0.6,0.4,0.7,0.6c-0.1,0.3-0.3,0.5-0.5,0.7c-0.2,0.2-1.2,0.5-2.3,0.5c-0.3,0-0.7,0-0.9,0c-0.3,0-2.5,0-3.3-0.4
+                                c-0.2-0.1-0.6-0.3-0.8-1C25.8,37.6,26,37.5,26.2,37.4z" />
+                                <path class="st7" d="M32.4,40c0,0,0.2-0.1,0.5,0c0.1,0,0.2,0.1,0.2,0.1c0.2,0.1,0.4,0.3,0.5,0.3c-0.3,0.3-1,0.7-1.8,1
+                                c-0.6,0.2-1.1,0.2-1.8,0.2c-0.8,0-1.4,0-2.1-0.2c-0.4-0.1-1.1-0.4-1.8-0.9c0.1-0.1,0.2-0.2,0.4-0.4c0,0,0.1-0.1,0.3-0.2
+                                c0.5-0.2,2,0.2,3.1,0.2C30.5,40.3,32.1,40.1,32.4,40z" />
+                            </g>
+                            <g id="Neutral" class="st4">
+                                <path class="st5"
+                                    d="M34.7,39.6c-0.4-0.5-1.1-1.1-2-1.4c-1-0.3-1.3,0.1-2.9,0.1c-1.8,0-2.2-0.4-3.2-0.2c-0.9,0.2-1.5,0.9-1.8,1.3
+                                c0.5,0.6,1.5,1.7,3,2c0.9,0.2,1.8,0.2,2.1,0.2c0.2,0,0.9,0,1.5-0.2C32.9,41.1,34,40.2,34.7,39.6z" />
+                                <path class="st6" d="M27.6,40.4c0.1-0.2,0.2-0.5,0.4-0.8c0.8-0.8,2.6-0.7,3.3,0.2c0.2,0.2,0.3,0.5,0.3,0.7
+                                C31.3,40.7,30.8,40.8,27.6,40.4z" />
+                                <path class="st7" d="M26.2,38.1c0.4-0.2,0.9-0.2,1.3-0.2c0.8,0.1,1.5,0.1,2.1,0.2c1.2,0,1.8-0.1,2.2-0.1c0.1,0,0.4-0.1,0.8,0
+                                c0.3,0.1,0.5,0.2,0.5,0.2c0.2,0.1,0.4,0.3,0.5,0.4c-0.1,0.3-0.3,0.5-0.5,0.7c-0.2,0.2-1.2,0.5-2.3,0.5c-0.3,0-0.7,0-0.9,0
+                                c-0.3,0-2.5,0-3.3-0.4c-0.2-0.1-0.6-0.3-0.8-0.9C25.8,38.4,26,38.3,26.2,38.1z" />
+                                <path class="st7" d="M32.5,40.1c0,0,0.2-0.1,0.5,0c0.1,0,0.2,0.1,0.2,0.1c0.2,0.1,0.3,0.2,0.4,0.3c-0.3,0.3-0.9,0.7-1.7,1
+                                c-0.6,0.2-1.1,0.2-1.8,0.2c-0.8,0-1.4,0-2.1-0.2c-0.4-0.1-1.2-0.3-1.9-0.9c0.1-0.1,0.2-0.3,0.4-0.4c0,0,0.1-0.1,0.3-0.2
+                                c0.5-0.2,2,0.2,3.1,0.2C30.6,40.4,32.2,40.2,32.5,40.1z" />
+                            </g>
+                            <g id="oMouth" class="st4">
+                                <path class="st5"
+                                    d="M29.7,36.7c-0.3,0-1.1,0-1.3,1.4c0,0.3,0.1,0.9,0.1,1.3c0,0.4-0.2,1.6,0,2c0.2,0.5,0.6,0.8,1.2,0.8
+                                c0.6,0,1.2-0.4,1.2-1.1c0-0.8-0.1-1.4-0.1-1.7c0-0.2,0.1-1,0.1-1.4C31,37.7,30.9,36.7,29.7,36.7z" />
+                                <path class="st7" d="M30.9,37.7c0-0.1-0.1-0.4-0.2-0.6c-0.3-0.4-0.8-0.4-1-0.4c-0.2,0-0.6,0-0.9,0.3c-0.2,0.2-0.3,0.5-0.3,0.7
+                                C28.9,37.8,29.9,38.3,30.9,37.7z" />
+                                <path class="st6"
+                                    d="M28.6,41.6c0,0,0.4,0.8,1.1,0.8c0.7,0,1.1-0.6,1.1-0.7C29.9,40.8,29,41.3,28.6,41.6z" />
+                            </g>
+                            <g id="THL" class="st4">
+                                <path class="st5"
+                                    d="M34.7,40.1c-0.2-0.8-0.8-2.2-2.1-2.8C32,37,31.3,37,29.9,36.9c-1.6-0.1-2.4-0.1-3,0.2
+                                c-1.4,0.6-1.9,2.1-2.1,2.8c0.5,0.6,1.5,1.7,3,2c0.9,0.2,1.8,0.2,2.1,0.2c0.2,0,0.9,0,1.5-0.2C32.9,41.6,34,40.7,34.7,40.1z" />
+                                <path class="st6"
+                                    d="M27.5,40.9c-0.1-1.4,1.1-2.5,2.2-2.4c1.1,0.1,2,1.2,1.8,2.6C31.5,41,29.2,42.1,27.5,40.9z" />
+                                <path class="st7"
+                                    d="M26.3,37.4c0.2-0.1,0.5-0.4,1.5-0.6c0.5-0.1,1.1-0.2,2-0.1c0.9,0,1.6,0.1,2,0.2c0.3,0.1,0.6,0.2,0.9,0.3
+                                c0.3,0.2,0.6,0.5,0.7,0.7c0,0.1-0.1,0.1-0.1,0.2c-0.2,0.2-0.5,0.3-0.6,0.3c-0.9,0.2-1.7,0.2-1.7,0.2c-0.7,0-1,0-1.2,0
+                                c0,0-1.8,0-3-0.2c-0.1,0-0.3-0.1-0.6-0.2c-0.2-0.1-0.3-0.2-0.4-0.3C25.9,37.8,26.1,37.6,26.3,37.4z" />
+                                <path class="st7" d="M32.4,40.6c0,0,0.2-0.1,0.5,0c0.1,0,0.2,0.1,0.2,0.1c0.2,0.1,0.4,0.3,0.5,0.3c-0.3,0.3-0.9,0.7-1.8,1
+                                c-0.8,0.3-1.5,0.3-2,0.3c-0.4,0-1.2,0-2.2-0.3c-0.7-0.3-1.3-0.6-1.6-0.9c0.1-0.1,0.2-0.2,0.4-0.4c0,0,0.1-0.1,0.3-0.2
+                                c0.5-0.2,2,0.2,3.1,0.2C30.5,40.9,32.1,40.7,32.4,40.6z" />
+                            </g>
+                            <g id="FV" class="st4">
+                                <g class="st8">
+                                    <path class="st9" d="M34.7,40.3c-0.2-0.4-0.6-0.8-1.1-1.2c-1-0.7-2-0.7-2.3-0.7c-0.4,0-0.4,0.1-1,0.1c-1,0-1.2-0.1-1.9-0.1
+                                    c-0.3,0-2.2,0-3.3,1.3c-0.2,0.2-0.3,0.5-0.4,0.6c0.3-0.1,0.6-0.1,0.8-0.1c0.1,0,0.4,0,0.6-0.1c0.2,0,0.3,0,0.5,0c0,0,0.1,0,0.2,0
+                                    c0.2,0,1,0,1.9,0.1c0.8,0,1.5,0,1.7,0c0.1,0,0.2,0,0.2,0c0.2,0,0.3,0,0.7-0.1c0.5,0,0.9-0.1,1.1-0.1
+                                    C32.7,40.1,33.4,40.1,34.7,40.3z" />
+                                    <path class="st9" d="M31.6,38.4c-0.2,0-0.5,0-0.5,0c-0.2,0-0.2,0-0.4,0.1c-0.2,0-0.4,0-0.6,0c-0.4,0-0.7,0-0.8,0
+                                    c-1-0.1-1.5-0.1-2,0c-0.2,0.1-0.7,0.1-1.1,0.4c0.2,0.4,0.4,0.6,0.6,0.7c0.6,0.5,1.4,0.5,2.9,0.5c0.3,0,0.4,0,0.7,0
+                                    c0.8,0,1.6-0.1,2.1-0.6c0.1-0.1,0.3-0.3,0.4-0.7C32.8,38.7,32.1,38.4,31.6,38.4z" />
+                                    <path class="st9" d="M27.8,41.2c0.1,0,0.2-0.1,0.3-0.1c0.1,0,0.2,0,0.3-0.1c0.1,0,0.2,0,0.3-0.1c0.1,0,0.2,0,0.3,0
+                                    c0.3-0.1,0.7-0.1,1.1-0.1c0.4,0,0.7,0,1.1,0.1c0.1,0,0.2,0,0.3,0c0.1,0,0.2,0,0.3,0.1l0.1,0c0,0,0.1,0,0.1,0
+                                    c0.1,0,0.2,0.1,0.2,0.1c-0.1,0-0.2,0-0.3,0c0,0-0.1,0-0.1,0l-0.1,0l-0.1,0c0,0-0.1,0-0.1,0c-0.1,0-0.2,0-0.3,0c-0.3,0-0.7,0-1,0
+                                    c-0.3,0-0.7,0-1,0C28.5,41.2,28.1,41.2,27.8,41.2z" />
+                                </g>
+                                <g class="st8">
+                                    <path class="st10" d="M34.7,40.3c-0.2-0.4-0.6-0.8-1.1-1.2c-1-0.7-2-0.7-2.3-0.7c-0.4,0-0.4,0.1-1,0.1c-1,0-1.2-0.1-1.9-0.1
+                                    c-0.3,0-2.2,0-3.3,1.3c-0.2,0.2-0.3,0.5-0.4,0.6c0.3-0.1,0.6-0.1,0.8-0.1c0.1,0,0.4,0,0.6-0.1c0.2,0,0.3,0,0.5,0c0,0,0.1,0,0.2,0
+                                    c0.2,0,1,0,1.9,0.1c0.8,0,1.5,0,1.7,0c0.1,0,0.2,0,0.2,0c0.2,0,0.3,0,0.7-0.1c0.5,0,0.9-0.1,1.1-0.1
+                                    C32.7,40.1,33.4,40.1,34.7,40.3z" />
+                                    <path class="st11" d="M31.6,38.4c-0.2,0-0.5,0-0.5,0c-0.2,0-0.2,0-0.4,0.1c-0.2,0-0.4,0-0.6,0c-0.4,0-0.7,0-0.8,0
+                                    c-1-0.1-1.5-0.1-2,0c-0.2,0.1-0.7,0.1-1.1,0.4c0.2,0.4,0.4,0.6,0.6,0.7c0.6,0.5,1.4,0.5,2.9,0.5c0.3,0,0.4,0,0.7,0
+                                    c0.8,0,1.6-0.1,2.1-0.6c0.1-0.1,0.3-0.3,0.4-0.7C32.8,38.7,32.1,38.4,31.6,38.4z" />
+                                    <path class="st9" d="M27.8,41.2c0.1,0,0.2-0.1,0.3-0.1c0.1,0,0.2,0,0.3-0.1c0.1,0,0.2,0,0.3-0.1c0.1,0,0.2,0,0.3,0
+                                    c0.3-0.1,0.7-0.1,1.1-0.1c0.4,0,0.7,0,1.1,0.1c0.1,0,0.2,0,0.3,0c0.1,0,0.2,0,0.3,0.1l0.1,0c0,0,0.1,0,0.1,0
+                                    c0.1,0,0.2,0.1,0.2,0.1c-0.1,0-0.2,0-0.3,0c0,0-0.1,0-0.1,0l-0.1,0l-0.1,0c0,0-0.1,0-0.1,0c-0.1,0-0.2,0-0.3,0c-0.3,0-0.7,0-1,0
+                                    c-0.3,0-0.7,0-1,0C28.5,41.2,28.1,41.2,27.8,41.2z" />
+                                </g>
+                            </g>
+                            <g id="QW" class="st4">
+                                <path class="st5"
+                                    d="M32.6,38.8c-0.2-0.3-0.5-0.8-1.1-1.3c-0.3-0.3-1-0.8-2-0.8c-1.1,0-1.8,0.6-2,0.8c-0.5,0.5-0.8,1-0.9,1.3
+                                c0,0.2,0,2.1,1.4,3c0.2,0.1,0.7,0.5,1.5,0.5c1.1,0,1.8-0.5,2-0.7C32.6,40.6,32.6,39.1,32.6,38.8z" />
+                                <path class="st7" d="M31.7,37.6c0,0-0.1-0.1-0.1-0.2c-0.6-0.8-1.7-0.8-2-0.8c-0.2,0-1.3,0-2,0.7c-0.1,0.1-0.1,0.2-0.2,0.2
+                                C28.1,37.9,29.8,38.5,31.7,37.6z" />
+                                <path class="st6" d="M29.3,40.4c-0.8-0.5-1.9-0.2-2.5,0.1c0.1,0.3,0.3,0.5,0.4,0.7c0.1,0.1,0.2,0.3,0.4,0.5c0,0,0.2,0.2,0.4,0.3
+                                c0.5,0.3,1.1,0.4,1.3,0.4c1.1,0.1,1.9-0.6,2.1-0.8c0.4-0.4,0.6-0.8,0.8-1c-0.2-0.1-0.7-0.5-1.5-0.5C30.1,40.1,29.6,40.3,29.3,40.4
+                                z" />
+                            </g>
+                        </g>
+                        <g id="Ogen">
+                            <g id="open">
+                                <path id="path2698" sodipodi:nodetypes="ccc" class="st12" d="M34.6,19.4c2.6,0.5,3.8,2.3,3.4,4.9C35.1,29.4,29.3,22.3,34.6,19.4z
+                                " />
+                                <path id="path2702" sodipodi:nodetypes="cssc" class="st13" d="M35.2,22.6c-0.5-0.9,2.2-0.2,1.5,2c-0.4,1.5-2.1,0.6-2.2,0.5
+                                C32.8,24.1,34.1,21.3,35.2,22.6z" />
+                                <path id="path2696" sodipodi:nodetypes="cccc" class="st12" d="M26.7,21.5c1.4,3,0.4,4.8-2.5,4.4c-0.9,0.4-2.8-1.8-2.4-3.2
+                                C21.4,18.8,24.7,18.7,26.7,21.5z" />
+                                <path id="path2700" sodipodi:nodetypes="cssc" class="st13" d="M23.3,23.2c-0.6,0,0.7-2,2.3-0.5c1.2,1.2-0.1,2.8-1,2.9
+                                C22.8,25.9,22.5,23.5,23.3,23.2z" />
+                            </g>
+                            <g id="closed" class="st4">
+                                <path class="st14" d="M21.7,23.6c0,0,0-1.9,2.8-1.9s2.8,1.9,2.8,1.9" />
+                                <path class="st14" d="M32.8,23.6c0,0-0.1-1.9,2.7-1.9c2.8,0,2.8,1.9,2.8,1.9" />
+                            </g>
+                        </g>
+                        <g id="Beard">
+                            <path id="path2654" sodipodi:nodetypes="cccccccccccccccccc" class="st1" d="M29.5,34c6.2-0.1,8.4,1.8,11.6,3.7
+                            c0.5,0.2,1.2,0.5,1.6,1c1.7,3.5-0.6,13.7-3.7,15.9c-0.3-1.6-3.9-3.8-5-3.9c-1.6-0.9-1.5,3.5-3.1,3.2c-0.7-2.5-3.1-4-4.7-3.2
+                            c-0.9-0.1-1.3,3.4-3.9,2.6c0.3-1.7-1.8-5.8-2.8-6.1c-1.7-1.1-2.5-3-2.8-5.6c0.2-2.6,1.3-4.6,3.5-5.9C23.2,34.8,23.3,33.9,29.5,34z
+                             M29.6,35.7c-2.3,0.3-5.5,0-7.1,2.5c-0.6,2.3,0.6,5.9,3,5.7c2.8-1.4,6-0.9,8.7,0c2.1,0.4,2.8-2.3,2.7-4
+                            C36.2,34.8,31.8,36.1,29.6,35.7z" />
+                        </g>
+                    </svg>
+
+
+
+
+                </div>
+                <button id="start">Start podcast</button>
+                <div class="roundEspen">
+                    <svg x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;">
+                        <style type="text/css">
+                            .Espenst0 {
+                                fill: #774703;
+                            }
+
+                            .Espenst1 {
+                                fill: #845202;
+                            }
+
+                            .Espenst2 {
+                                fill: #FFCB9E;
+                            }
+
+                            .Espenst3 {
+                                opacity: 0.35;
+                                fill: #B55623;
+                            }
+
+                            .Espenst4 {
+                                fill: #FFD8B5;
+                            }
+
+                            .Espenst5 {
+                                opacity: 0.6;
+                                fill: #D9AF96;
+                            }
+
+                            .Espenst6 {
+                                fill: #704404;
+                            }
+
+                            .Espenst7 {
+                                fill: #2B2521;
+                            }
+
+                            .Espenst8 {
+                                opacity: 0.7;
+                                fill: url(#SVGID_1_);
+                            }
+
+                            .Espenst9 {
+                                opacity: 0.7;
+                                fill: url(#SVGID_2_);
+                            }
+
+                            .Espenst10 {
+                                fill: #E6F7FF;
+                            }
+
+                            .Espenst11 {
+                                fill: #8E5604;
+                            }
+
+                            .Espenst12 {
+                                fill: none;
+                                stroke: #3F2D10;
+                                display: none;
+                            }
+
+                            .Espenst13 {
+                                display: none;
+                            }
+
+                            .Espenst14 {
+                                display: inline;
+                                fill: #372416;
+                            }
+
+                            .Espenst15 {
+                                display: inline;
+                                fill: #DD3D59;
+                            }
+
+                            .Espenst16 {
+                                display: inline;
+                                fill: #FFF5F0;
+                            }
+
+                            .Espenst17 {
+                                display: inline;
+                            }
+
+                            .Espenst18 {
+                                fill: #6F5E51;
+                            }
+
+                            .Espenst19 {
+                                fill: #372416;
+                            }
+
+                            .Espenst20 {
+                                fill: #FFF5F0;
+                            }
+
+                            .Espenst21 {
+                                fill: #211011;
+                            }
+
+                            .Espenst22 {
+                                fill: #A89191;
+                            }
+
+                            .Espenst23 {
+                                display: inline;
+                                fill: none;
+                                stroke: #211011;
+                                stroke-miterlimit: 10;
+                            }
+
+                            .showItem {
+                                display: inline;
+                            }
+                        </style>
+                        <g id="Espen_1_">
+                            <g id="Espen">
+                                <g>
+                                    <path class="Espenst0" d="M47,27.4c0.5-1,0.3-10.3,1.5-9.2c4.3,3.8,0.8,10.5,3.3,15.3c0.3,0.6-2.3,0.6-2.5,0.5
+                                    C46.5,33.2,45.7,29.6,47,27.4z" />
+                                    <path class="Espenst1" d="M46.4,26.2c1.9-0.8,4.1-1.4,1.8-9.5c-2.5-8.8-14-13-22.9-10.1c-21.5,7-14.3,31.8-8,29.9
+                                    C23.6,34.6,44.5,27,46.4,26.2z" />
+                                    <path class="Espenst2" d="M15.4,34.6c1.8,11.5,11,19.6,20.4,18.1c9.4-1.5,15.6-12,13.8-23.5C47.8,17.6,38.7,9.5,29.2,11
+                                    C19.8,12.6,13.6,23.1,15.4,34.6z" />
+                                    <path class="Espenst3" d="M39.1,32.4c0.5,0.4-0.3,1.9-2.1,2.2c-1.9,0.3-3.1-1.2-2.4-1.7c0.7-0.5,1.2-0.1,2.2-0.2
+                                    C38,32.5,38.5,31.9,39.1,32.4z" />
+                                    <path class="Espenst4"
+                                        d="M38.9,32.5c0.5-0.5-0.3-2.4-2.5-2c-1.9,0.3-2.6,2-1.6,2.6C36.1,33.8,38.2,33.2,38.9,32.5z" />
+                                    <path class="Espenst2" d="M14,40.8c1.3,0.3,2.6,0.2,3.8,0c0,0,0-0.1,0.1-0.1c0.5-0.8-0.7-4.7-1.1-5.5c-0.9-2-2.1-3.3-4.3-2.5
+                                    C7.9,34.3,10.1,40,14,40.8z" />
+                                    <path class="Espenst5" d="M18.3,28.7c0.1-1.9,0.3-3.8,1-5.6c1.4-3.6,5-5.2,8.5-6.2c4.4-1.2,9.2-1.5,13.7-1.2c1.1,0.1,5.8,0.2,5.1,2.1
+                                    c-0.6,1.6-2.7,3.2-4.1,3.6c-2,0.6-6,0.9-8.1,1c-7,0.2-9.9,2.7-10.6,4.2c-0.2-0.8,0.1-2.4,0.5-3.2c-0.1,0.2-2.6,2.1-2.8,4.6
+                                    c-0.2,2.8-1.9,2.9-2,5.8C18.8,33.6,18.1,31.1,18.3,28.7z" />
+                                    <path class="Espenst1"
+                                        d="M21.5,12.8c-6.1,3.5-8.7,14.2-7.4,20.3c0.7,3.5,5.6,3.1,5.4,1.1c-0.8-6.1-0.4-10.5,8.3-13.7
+                                    c6.9-2.6,15.4-2.8,17.8-1.6c2.3,1.2-0.6-4.3-7.2-7.3C31.7,8.7,26.2,10.2,21.5,12.8z" />
+                                    <path class="Espenst5" d="M16.4,39.4c2.1-0.9,0.3-4.2-1.2-4.7c-1.3-0.5-4.5,0.2-3.1,2.1c0.9-1.7,2.2-0.5,1.9,0.7
+                                    c-0.2,0.8-1.4,0.8-0.3,1.9C14.4,39.9,15.7,39.7,16.4,39.4z" />
+                                    <path class="Espenst6"
+                                        d="M49.9,17.5c-5.8,5.6-18.3,1.1-24.6,6.1c-0.1-0.9,0.1-1.9,0.4-2.7c-0.2,0.5-3.3,2-3.9,1.9
+                                    c-1.7-0.1-2.7-1.8-3.3-3.1c-1.8-3.9-1.7-7.9,1.7-10.5C24.8,5.7,30.9,5,36.7,5.8C46.8,7.2,52.6,14.9,49.9,17.5z" />
+                                    <path class="Espenst1" d="M20,38.9c0.2,0,0.3,0,0.5,0c-0.1-2.1-0.8-4-1-6.1c-0.2-1.5-0.3-1.7-1.4-2.2c-1.2-0.5-2.8,0.2-4.2-0.3
+                                    c0.6,0.3,0.5,2.8,0.5,3.3C14.6,37,16.8,38.9,20,38.9z" />
+                                    <path class="Espenst0" d="M11.6,11.2c2.4,5.2,9,3,11.8,0.9c1.3-1,2.5-5.8,0.2-5c-3.2,1.1-6.6,2.2-9.4,0.9c0.1,0.6,0.2,2.1,1.6,2.7
+                                    C15.1,11.6,13.4,11.9,11.6,11.2z" />
+                                    <path class="Espenst7" d="M44.9,22.7c1.2-0.2,1.5-0.8,0.2-1.2c-0.7-0.2-1.6-0.1-2.3,0c-0.4,0-2.2,0-2.5,0.4
+                                    C39.3,23.3,44.5,22.7,44.9,22.7z" />
+                                    <path class="Espenst7" d="M24.6,26c-1.2,0.2-1.7-0.3-0.6-1.1c0.6-0.5,1.4-0.7,2.1-0.8c0.4-0.1,2-0.8,2.4-0.5C30,24.6,25,25.9,24.6,26z
+                                    " />
+                                    <g>
+                                        <g>
+                                            <path class="Espenst7" d="M48.5,23.6c-1.5-1.3-8.5,0-9.7,1.9c-0.8,1.3,0.1,5.7,1.1,6.7c1,0.9,7.8-0.4,9.1-1.2
+                                            C50.4,30.1,50,24.9,48.5,23.6z M48.7,29.9c-1.1,0.7-6.9,1.9-7.7,1.3c-0.9-0.6-1.8-3.8-1.2-4.7c0.9-1.4,6.9-2.7,8.2-1.8
+                                            C49.2,25.5,49.8,29.2,48.7,29.9z" />
+                                        </g>
+                                        <g>
+                                            <path class="Espenst7" d="M32.1,26.3c-1.7-1.4-10.2-0.1-11.6,1.9c-1,1.3,0,6.1,1.2,7.1c1.2,1,9.3-0.3,10.9-1.2
+                                            C34.3,33.2,33.8,27.7,32.1,26.3z M32.2,32.8c-1.4,0.7-8.2,1.9-9.3,1.3c-1-0.7-2.1-3.9-1.4-4.9c1.1-1.4,8.2-2.7,9.8-1.8
+                                            C32.9,28.3,33.6,32.1,32.2,32.8z" />
+                                        </g>
+                                        <path class="Espenst7"
+                                            d="M36.4,28.8c-0.7,0.1-1.3,0.3-2,0.6c-0.2,0.1-1.1,0.9-1.3,0.9c-0.7-0.2,1-1.7,1.2-1.8
+                                        c1.3-0.8,3.6-1.1,4.7,0.3c0.6,0.8-0.1,0.6-0.5,0.4C37.7,28.8,37.3,28.6,36.4,28.8z" />
+                                        <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="44.215"
+                                            y1="31.474" x2="44.5875" y2="24.109">
+                                            <stop offset="0" style="stop-color:#403C37" />
+                                            <stop offset="1" style="stop-color:#EDE9E3" />
+                                        </linearGradient>
+                                        <path class="Espenst8" d="M39.3,26.3c1-1.5,7.5-2.9,8.9-2c1.4,1,2.1,4.9,0.8,5.7c-1.2,0.8-7.5,2.1-8.4,1.4
+                                        C39.7,30.8,38.6,27.4,39.3,26.3z" />
+
+                                        <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="-19.6191"
+                                            y1="47.2142" x2="-19.2466" y2="39.8494"
+                                            gradientTransform="matrix(1.1475 -1.200000e-03 -1.200000e-03 1.0494 49.4619 -15.131)">
+                                            <stop offset="0" style="stop-color:#403C37" />
+                                            <stop offset="1" style="stop-color:#EDE9E3" />
+                                        </linearGradient>
+                                        <path class="Espenst9"
+                                            d="M21.3,29c1.2-1.6,8.6-3.1,10.2-2.1s2.3,5.2,0.9,6c-1.4,0.8-8.6,2.2-9.6,1.5C21.7,33.7,20.5,30.1,21.3,29z" />
+                                    </g>
+                                </g>
+                                <path class="Espenst11"
+                                    d="M46.2,18.3c5.2-2.1,1.8-6.4-1-8.4c-4.2-3-10-3.5-15.2-3.1c-4.1,0.4-11,2.2-12.3,6.8
+                                c-0.9,3.1,2.3,4.6,4.9,5.1c1.8,0.4,3.8,0.2,5.6,0c-0.4,0.6-0.8,1.3-1.2,1.9C33.2,19.6,40.3,20.7,46.2,18.3z" />
+                            </g>
+                        </g>
+                        <g id="Mouths">
+                            <g id="Mouths_1_">
+                                <path id="EspenSmile" class="Espenst12" d="M32.9,43.6c2,2.1,8.2,1,9-2.8" />
+                                <g id="EspenAEI" class="Espenst13">
+                                    <path class="Espenst14" d="M43.8,41.7c-1.3-1.8-2.5-2.3-3.3-2.4c-1.4-0.2-1.8,0.9-3.7,1.2c-2.2,0.4-3.1-0.5-4.4,0.3
+                                    c-0.6,0.4-1.4,1.2-1.7,3.2c0.8,0.7,2.4,1.9,4.4,1.9c1.2,0.1,2.4-0.2,2.8-0.2c0.3,0,1.2-0.2,1.9-0.6
+                                    C41.9,44.2,43.1,42.7,43.8,41.7z" />
+                                    <path class="Espenst15"
+                                        d="M34.5,44.4c0,0,1.8-2.6,5.3-0.8C39.8,43.6,37.1,45.6,34.5,44.4z" />
+                                    <path class="Espenst16" d="M32.1,40.9c0.6-0.5,1.3-0.5,1.7-0.6c1.7-0.2,2.9-0.3,4.1-0.6c0,0,1.3-0.4,2.5-0.4c0.1,0,0.3,0,0.6,0
+                                    c0.4,0.1,0.9,0.4,1.1,0.6c-0.1,0.4-0.3,0.7-0.5,1c-0.2,0.3-1.5,0.9-2.9,1.2c-0.4,0.1-0.9,0.2-1.2,0.2c-0.4,0.1-3.3,0.6-4.4,0.3
+                                    c-0.3-0.1-0.9-0.3-1.3-1.1C31.7,41.3,31.9,41.1,32.1,40.9z" />
+                                    <path class="Espenst16" d="M40.9,42.9c0,0,0.2-0.2,0.7-0.1c0.1,0,0.3,0.1,0.3,0.1c0.3,0.1,0.6,0.3,0.7,0.3c-0.3,0.5-1.2,1.2-2.1,1.7
+                                    c-0.7,0.4-1.4,0.5-2.3,0.7c-1.1,0.2-1.8,0.3-2.8,0.2c-0.6,0-1.5-0.3-2.6-0.8c0.1-0.2,0.2-0.3,0.4-0.6c0,0,0.1-0.2,0.3-0.3
+                                    c0.6-0.4,2.7-0.2,4.1-0.5C38.5,43.7,40.6,43.1,40.9,42.9z" />
+                                </g>
+                                <g id="EspenNeutral" class="Espenst13">
+                                    <path class="Espenst14" d="M43.9,41.8c-0.6-0.6-1.7-1.2-3-1.4c-1.4-0.2-1.7,0.4-3.8,0.8c-2.4,0.4-3,0-4.3,0.5
+                                    c-1.1,0.5-1.8,1.5-2.1,2.1c0.8,0.7,2.4,1.9,4.4,1.9c1.2,0.1,2.4-0.2,2.8-0.2c0.3,0,1.2-0.2,1.9-0.6
+                                    C41.9,44.2,43.1,42.7,43.9,41.8z" />
+                                    <path class="Espenst15" d="M34.7,44.5c0.1-0.3,0.1-0.7,0.3-1.1c0.9-1.2,3.3-1.5,4.4-0.5c0.3,0.2,0.5,0.6,0.6,0.9
+                                    C39.6,44,39,44.3,34.7,44.5z" />
+                                    <path class="Espenst16" d="M32.3,41.8c0.5-0.4,1.1-0.5,1.7-0.6c1.1-0.1,2-0.2,2.8-0.2c1.6-0.3,2.4-0.6,2.9-0.7c0.1,0,0.5-0.2,1.1-0.2
+                                    c0.4,0.1,0.7,0.1,0.7,0.1c0.3,0.1,0.6,0.3,0.8,0.4c-0.1,0.4-0.3,0.7-0.5,1c-0.2,0.3-1.5,0.9-2.9,1.2c-0.4,0.1-0.9,0.2-1.2,0.2
+                                    c-0.4,0.1-3.3,0.6-4.4,0.3c-0.3-0.1-0.9-0.3-1.3-1C31.8,42.3,32.1,42.1,32.3,41.8z" />
+                                    <path class="Espenst16" d="M41.1,43c0,0,0.2-0.2,0.7-0.1c0.1,0,0.3,0.1,0.3,0.1c0.3,0.1,0.4,0.2,0.6,0.3c-0.3,0.5-1,1.1-2,1.7
+                                    c-0.7,0.4-1.4,0.5-2.3,0.7c-1.1,0.2-1.8,0.3-2.8,0.2c-0.6,0-1.7-0.1-2.7-0.7c0.1-0.2,0.2-0.4,0.4-0.6c0,0,0.1-0.2,0.3-0.3
+                                    c0.6-0.4,2.7-0.2,4.1-0.5C38.7,43.8,40.7,43.2,41.1,43z" />
+                                </g>
+                                <g id="Espeno" class="Espenst13">
+                                    <path class="Espenst14" d="M36.6,39.1c-0.4,0.1-1.5,0.3-1.4,2.2c0.1,0.4,0.3,1.2,0.4,1.7c0.1,0.5,0.1,2.2,0.5,2.6
+                                    c0.4,0.6,1,0.9,1.8,0.8c0.8-0.1,1.5-0.8,1.3-1.7c-0.2-1.1-0.5-1.8-0.5-2.2c0-0.3-0.1-1.3-0.2-1.9C38.5,40.2,38.2,38.9,36.6,39.1z
+                                    " />
+                                    <path class="Espenst16" d="M38.4,40.2c0-0.1-0.2-0.5-0.4-0.7c-0.5-0.5-1.1-0.3-1.4-0.3c-0.3,0-0.8,0.1-1.1,0.6c-0.2,0.3-0.3,0.7-0.2,1
+                                    C35.8,40.8,37.2,41.2,38.4,40.2z" />
+                                    <path class="Espenst15"
+                                        d="M36.3,45.9c0,0,0.7,1,1.6,0.8s1.3-1.1,1.3-1.2C37.8,44.5,36.8,45.4,36.3,45.9z" />
+                                </g>
+                                <g id="EspenTHL" class="Espenst13">
+                                    <path class="Espenst14"
+                                        d="M44,42.4c-0.5-1-1.6-2.7-3.4-3.2c-0.9-0.3-1.8-0.1-3.7,0.1c-2.1,0.2-3.2,0.4-3.9,1c-1.7,1.1-2,3.2-2.1,4.2
+                                    c0.8,0.7,2.4,1.9,4.4,1.9c1.2,0.1,2.4-0.2,2.8-0.2c0.3,0,1.2-0.2,1.9-0.6C42,44.9,43.2,43.4,44,42.4z" />
+                                    <path class="Espenst15"
+                                        d="M34.7,45.2c-0.5-1.8,0.9-3.6,2.3-3.7c1.5-0.1,2.9,1.1,3,3C40,44.4,37.2,46.4,34.7,45.2z" />
+                                    <path class="Espenst16"
+                                        d="M32.3,40.9c0.2-0.2,0.6-0.6,1.8-1.1c0.6-0.3,1.4-0.5,2.6-0.6c1.2-0.2,2.1-0.2,2.7-0.2
+                                    c0.4,0.1,0.8,0.1,1.3,0.2c0.4,0.2,0.9,0.5,1.1,0.8c0,0.1-0.1,0.2-0.1,0.3c-0.2,0.3-0.6,0.5-0.7,0.5c-1.1,0.5-2.2,0.7-2.2,0.7
+                                    c-0.9,0.2-1.3,0.2-1.6,0.3c0,0-2.4,0.4-4,0.4c-0.1,0-0.4-0.1-0.8-0.1c-0.3-0.1-0.4-0.2-0.6-0.3C31.8,41.5,32.1,41.2,32.3,40.9z" />
+                                    <path class="Espenst16" d="M41.1,43.7c0,0,0.2-0.2,0.7-0.1c0.1,0,0.3,0.1,0.3,0.1c0.3,0.1,0.6,0.3,0.7,0.3c-0.3,0.5-1,1.1-2.1,1.7
+                                    c-1,0.6-1.9,0.8-2.6,0.9c-0.5,0.1-1.6,0.3-3,0.1c-1-0.2-1.9-0.5-2.3-0.8c0.1-0.2,0.2-0.3,0.4-0.6c0,0,0.1-0.2,0.3-0.3
+                                    c0.6-0.4,2.7-0.2,4.1-0.5C38.6,44.5,40.7,43.9,41.1,43.7z" />
+                                </g>
+                                <g id="EspenFV" class="Espenst13">
+                                    <g class="Espenst17">
+                                        <path class="Espenst18" d="M44,42.7c-0.4-0.5-1-0.9-1.7-1.3c-1.5-0.7-2.8-0.5-3.2-0.4c-0.5,0.1-0.5,0.2-1.3,0.4
+                                        c-1.3,0.2-1.6,0.2-2.5,0.3c-0.4,0.1-2.9,0.5-4,2.5c-0.2,0.3-0.3,0.7-0.4,0.9c0.4-0.2,0.8-0.3,1-0.3c0.1,0,0.5-0.1,0.8-0.3
+                                        c0.3,0,0.4-0.1,0.7-0.1c0,0,0.1,0,0.3,0c0.3,0,1.3-0.2,2.5-0.3c1.1-0.2,2-0.4,2.2-0.4c0.1,0,0.3,0,0.3,0c0.3,0,0.4-0.1,0.9-0.3
+                                        c0.7-0.1,1.2-0.3,1.4-0.4C41.4,42.9,42.3,42.8,44,42.7z" />
+                                        <path class="Espenst18"
+                                            d="M39.5,40.9c-0.3,0-0.7,0.1-0.7,0.1c-0.3,0-0.3,0-0.5,0.2c-0.3,0-0.5,0.1-0.8,0.1c-0.5,0.1-0.9,0.2-1.1,0.2
+                                        c-1.3,0.1-2,0.2-2.6,0.5c-0.2,0.2-0.9,0.3-1.4,0.8c0.4,0.5,0.7,0.7,1,0.8c0.9,0.5,2,0.3,3.9,0c0.4-0.1,0.5-0.1,0.9-0.2
+                                        c1.1-0.2,2.1-0.5,2.6-1.3c0.1-0.2,0.3-0.5,0.4-1C41.2,41.1,40.2,40.8,39.5,40.9z" />
+                                        <path class="Espenst18" d="M35.1,45.5c0.1,0,0.2-0.2,0.4-0.2c0.1,0,0.3,0,0.4-0.2c0.1,0,0.3,0,0.4-0.2c0.1,0,0.3,0,0.4-0.1
+                                        c0.4-0.2,0.9-0.3,1.4-0.4c0.5-0.1,0.9-0.2,1.5-0.1c0.1,0,0.3,0,0.4-0.1c0.1,0,0.3,0,0.4,0.1l0.1,0l0.1,0c0.1,0,0.3,0.1,0.3,0.1
+                                        c-0.1,0-0.3,0-0.4,0.1l-0.1,0l-0.1,0l-0.1,0l-0.1,0c-0.1,0-0.3,0-0.4,0.1c-0.4,0.1-0.9,0.2-1.3,0.2c-0.4,0.1-0.9,0.2-1.3,0.2
+                                        C36.1,45.4,35.5,45.5,35.1,45.5z" />
+                                    </g>
+                                    <g class="Espenst17">
+                                        <path class="Espenst19" d="M44,42.7c-0.4-0.5-1-0.9-1.7-1.3c-1.5-0.7-2.8-0.5-3.2-0.4c-0.5,0.1-0.5,0.2-1.3,0.4
+                                        c-1.3,0.2-1.6,0.2-2.5,0.3c-0.4,0.1-2.9,0.5-4,2.5c-0.2,0.3-0.3,0.7-0.4,0.9c0.4-0.2,0.8-0.3,1-0.3c0.1,0,0.5-0.1,0.8-0.3
+                                        c0.3,0,0.4-0.1,0.7-0.1c0,0,0.1,0,0.3,0c0.3,0,1.3-0.2,2.5-0.3c1.1-0.2,2-0.4,2.2-0.4c0.1,0,0.3,0,0.3,0c0.3,0,0.4-0.1,0.9-0.3
+                                        c0.7-0.1,1.2-0.3,1.4-0.4C41.4,42.9,42.3,42.8,44,42.7z" />
+                                        <path class="Espenst20"
+                                            d="M39.5,40.9c-0.3,0-0.7,0.1-0.7,0.1c-0.3,0-0.3,0-0.5,0.2c-0.3,0-0.5,0.1-0.8,0.1c-0.5,0.1-0.9,0.2-1.1,0.2
+                                        c-1.3,0.1-2,0.2-2.6,0.5c-0.2,0.2-0.9,0.3-1.4,0.8c0.4,0.5,0.7,0.7,1,0.8c0.9,0.5,2,0.3,3.9,0c0.4-0.1,0.5-0.1,0.9-0.2
+                                        c1.1-0.2,2.1-0.5,2.6-1.3c0.1-0.2,0.3-0.5,0.4-1C41.2,41.1,40.2,40.8,39.5,40.9z" />
+                                        <path class="Espenst18" d="M35.1,45.5c0.1,0,0.2-0.2,0.4-0.2c0.1,0,0.3,0,0.4-0.2c0.1,0,0.3,0,0.4-0.2c0.1,0,0.3,0,0.4-0.1
+                                        c0.4-0.2,0.9-0.3,1.4-0.4c0.5-0.1,0.9-0.2,1.5-0.1c0.1,0,0.3,0,0.4-0.1c0.1,0,0.3,0,0.4,0.1l0.1,0l0.1,0c0.1,0,0.3,0.1,0.3,0.1
+                                        c-0.1,0-0.3,0-0.4,0.1l-0.1,0l-0.1,0l-0.1,0l-0.1,0c-0.1,0-0.3,0-0.4,0.1c-0.4,0.1-0.9,0.2-1.3,0.2c-0.4,0.1-0.9,0.2-1.3,0.2
+                                        C36.1,45.4,35.5,45.5,35.1,45.5z" />
+                                    </g>
+                                </g>
+                                <g id="EspenQW" class="Espenst13">
+                                    <path class="Espenst14"
+                                        d="M40.9,41.2c-0.3-0.3-0.8-0.9-1.8-1.5c-0.5-0.3-1.5-0.8-2.8-0.6c-1.5,0.3-2.2,1.2-2.4,1.5
+                                    c-0.5,0.8-0.8,1.5-0.9,1.9c0,0.3,0.5,2.8,2.6,3.6c0.3,0.1,1,0.5,2.1,0.3c1.5-0.3,2.3-1.1,2.5-1.4C41.3,43.6,41,41.6,40.9,41.2z" />
+                                    <path class="Espenst16" d="M39.4,39.9c0,0-0.2-0.1-0.2-0.2c-1-0.9-2.4-0.7-2.8-0.6c-0.3,0-1.7,0.3-2.5,1.4c-0.1,0.2-0.1,0.3-0.2,0.3
+                                    C34.8,41.1,37.1,41.5,39.4,39.9z" />
+                                    <path class="Espenst15" d="M36.9,44.1c-1.2-0.5-2.6,0.2-3.3,0.7c0.2,0.4,0.5,0.6,0.7,0.8c0.2,0.1,0.3,0.3,0.6,0.6c0,0,0.3,0.2,0.6,0.3
+                                    c0.7,0.3,1.5,0.3,1.8,0.2c1.5-0.1,2.4-1.2,2.6-1.6c0.4-0.6,0.6-1.2,0.8-1.5c-0.3-0.1-1-0.5-2.1-0.3
+                                    C37.9,43.5,37.3,43.9,36.9,44.1z" />
+                                </g>
+                            </g>
+                        </g>
+                        <g id="espenEyes">
+                            <g id="espenOpenEyes" class="openEyes">
+                                <g>
+                                    <path class="Espenst21"
+                                        d="M28.2,32.7c-0.7-0.3-1.5-0.3-2.1,0c-1.6-1.1-0.5-5,1.7-4.3C29.3,29,29.5,31.8,28.2,32.7z" />
+                                </g>
+                                <g>
+                                    <path class="Espenst21"
+                                        d="M44.4,25.7c1.3,0.4,1.6,2.3,1,3.4c-0.6,0-1.3,0.4-1.7,0.8C41.1,29.7,42,24.9,44.4,25.7z" />
+                                </g>
+                                <path class="Espenst22"
+                                    d="M27.1,29c0.7-0.3,1.3,0.8,0.8,1.3C27.1,31,26.3,29.4,27.1,29z" />
+                                <path class="Espenst22"
+                                    d="M43.9,26.4c0.7-0.3,1.2,0.8,0.7,1.2C43.9,28.2,43.2,26.7,43.9,26.4z" />
+                            </g>
+                            <g id="espenClosedEyes" class="Espenst13 closedEyes">
+                                <path class="Espenst23" d="M25.3,31c0,0,0.2-0.3,1.9-0.3s1.9,0.3,1.9,0.3" />
+                                <path class="Espenst23" d="M42.5,29c0,0,0.1-0.4,1.7-0.8s1.9-0.1,1.9-0.1" />
+                            </g>
+                        </g>
+                    </svg>
+
+                </div>
+            </div>
+
+            <!-- <p><span class='vasilis'>Vasilis:</span> Lorem</p>  -->
+            <!-- <p><span class='espen'>Espen:</span> Lorem</p>  -->
+        </section>
+    </main>
+</body>
+
+</html>
