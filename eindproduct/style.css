@@ -78,9 +78,18 @@ button {
     padding: .5rem 1rem;
     margin: 0 auto;
     transition: all .5s ease;
+    border-radius: .2rem;
 }
 
-header button:hover {
+button.hide {
+    display: none;
+}
+
+button.active {
+    background: var(--red);
+}
+
+button:hover {
     background: var(--red);
 }
 
@@ -92,14 +101,18 @@ header button:hover {
 
 /* transcript  */
 
-main {
+main>section {
     width: min(40rem, 90%);
-    margin: 5rem auto 0 auto;
+    margin: 0rem auto 0 auto;
     font-size: 22px;
     line-height: 33px;
 }
 
-main p {
+.box {
+    border-radius: 0 0 .5rem .5rem;
+}
+
+.box p {
     margin: 2rem auto;
 
     padding: 1rem;
@@ -108,7 +121,7 @@ main p {
     width: 90%;
 }
 
-main p:nth-child(even) {
+.box p:nth-child(even) {
     background: #f3f3f3;
 }
 
@@ -133,10 +146,30 @@ audio {
     display: none;
 }
 
+.podcastInfo {
+    width: min(40rem, 90%);
+    padding: 2rem 2rem 0 2rem;
+    margin: 4rem auto 0 auto;
+    background: lightgray;
+    border-radius: .5rem .5rem 0rem 0rem;
+}
+
+.podcastInfo span {
+    font-weight: bold;
+}
+
+.podcastDescription {
+    padding: 1rem 0;
+}
+
+.podcastInfoClicker {
+    display: none;
+}
+
 .box {
     display: block;
     /* width: min(40rem, 100%); */
-    height: 65vh;
+    height: 60vh;
     /* margin: 6rem auto 0 auto; */
     background-color: lightgray;
     overflow-y: scroll;
@@ -146,7 +179,7 @@ audio {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
 }
 
 .roundVasilis {
@@ -161,6 +194,29 @@ audio {
     color: white;
     cursor: pointer;
 }
+
+.vasilisEyesOpen.active,
+.espenOpenEyes.active {
+    display: inline;
+}
+
+.vasilisEyesOpen,
+.espenOpenEyes {
+    display: none;
+}
+
+.vasilisEyesClosed,
+.espenClosedEyes {
+    display: none;
+}
+
+.vasilisEyesClosed.active,
+.espenClosedEyes.active {
+    display: inline;
+}
+
+
+
 
 .roundEspen {
     width: 5rem;
@@ -179,10 +235,6 @@ audio {
     background: gray;
 }
 
-#start {
-    border-radius: .2rem;
-    margin-bottom: 1rem;
-}
 
 .waiting {
     animation: pulse 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -193,6 +245,23 @@ audio {
     color: #333;
     font-size: 80%;
 }
+
+
+/* NUANCES DEKSTOP ONLY  */
+
+.nuances {
+    display: none;
+}
+
+.mario {
+    display: none;
+}
+
+.thumbleWeed {
+    display: none;
+}
+
+/* END NUANCES DEKSTOP ONLY  */
 
 @keyframes pulse {
     0% {
@@ -262,12 +331,12 @@ nav ul li a.activeEnvironment {
         background: #404040;
     }
 
-    main p {
+    .box p {
         background: var(--darkmode);
         color: white;
     }
 
-    main p:nth-child(even) {
+    .box p:nth-child(even) {
         background: #181818;
     }
 
@@ -288,12 +357,190 @@ nav ul li a.activeEnvironment {
         color: white;
     }
 
+    .podcastInfo {
+        background: #404040;
+        color: white;
+    }
+
+
+
 }
 
 
-.bgYellow {
-    background: yellow;
+@media all and (min-width: 1300px) {
+
+    /* NUANCES DEKSTOP ONLY  */
+
+    main {
+        position: relative;
+    }
+
+    .roundEspen {
+        position: relative;
+    }
+
+    .nuances {
+        display: block;
+        position: absolute;
+        top: 10rem;
+        right: 0;
+    }
+
+    .friendsSuprised {
+        width: 15rem;
+    }
+
+    .friendsSuprised {
+        display: none;
+        opacity: 0;
+        transition: all .5s ease;
+    }
+
+    .friendsSuprised.showFriends {
+        display: block;
+        animation-name: showNuance;
+        animation-duration: 4s;
+        animation-iteration-count: 1;
+
+    }
+
+
+    .box {
+        position: relative;
+    }
+
+    .mario {
+        position: absolute;
+        left: 2rem;
+        opacity: 0;
+        display: none;
+    }
+
+    .mario.run {
+        display: block;
+        animation-name: run;
+        animation-duration: 5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+    }
+
+    .mario img {
+        width: 2rem;
+    }
+
+    .thumbleWeed {
+        position: absolute;
+        top: 0;
+        right: -10rem;
+        width: 3rem;
+        opacity: 0;
+        transition: all .5s ease;
+
+    }
+
+    .thumbleWeed.showTW {
+        display: block;
+        animation-name: showTW;
+        animation-duration: .5s;
+        animation-iteration-count: 1;
+        animation-delay: 0;
+        animation-fill-mode: both;
+    }
+
+    .thumbleWeed.rollTW {
+        display: block;
+        animation-name: rollTW;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+        animation-delay: .5s;
+    }
+
+
+
+    /* END NUANCES DEKSTOP ONLY  */
+
+
 }
+
+@keyframes showTW {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes rollTW {
+
+    0% {
+        transform: translate(-1rem, 0) rotate(0deg);
+        opacity: 1;
+    }
+
+    90% {
+        transform: translate(10rem, 0) rotate(4turn);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(10rem, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes hideTW {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes showNuance {
+
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes run {
+
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(35.5rem, 0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(35.5rem, 100vh);
+        opacity: 1;
+    }
+
+
+}
+
+
 
 /* .message {
     opacity: 1;
