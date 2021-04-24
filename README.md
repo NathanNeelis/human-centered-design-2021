@@ -1,8 +1,4 @@
 # Human Centered Design @cmda-minor-web 2021
-Readme will be made over here  
-  
-resource: https://stackoverflow.com/questions/51096633/display-elements-of-an-array-one-by-one-in-order-on-event-click    
-resource: https://codeburst.io/50-shades-of-dark-mode-gray-d3e9907b1194    
 
 ## :sparkles: Exclusive design
 Exclusive design is designing for the needs of a specific person. This person may have or may not have a disability to take into account. 
@@ -14,7 +10,7 @@ I got to work with Darice and she is deaf. The assignment was to get to know Dar
 To create an exclusive deisgn, I had to find out how she uses podcast at this moment and how I can improve this experience.
 
 
-## Darice & Podcasts
+## :mute: Darice & Podcasts
 As mentioned before, Darice has lost her ability to hear sound. This means that she has experienced sound before but lost it during her lifetime. 
 I was suprised that in our meetings our part of the conversation got translated by a typing tolk that transfered our audio speech into text, but Darice was able to respond to that by speaking through her mic. This made testing very smooth and she got all her feedback over to me loud and clear! 
 Darice is a frontend-developer and much more than that. Because she is also an expert on accessiblity and exclusive design. She knows all about design principles and this shows in testing with prototypes. In our first meeting my suspicion was confirmed, she doens't listen to podcast but she reads the transcriptions. You might say, ofcourse she does that! But if exclusive design has thought me anything, it is that you always have to verify your thoughs because it might very well be different with this particulair person. Some other points of interest in getting to know Darice was that she has a love for the tv-show 'Friends' and has a very good sense of humor.
@@ -30,17 +26,16 @@ I created a small test enviroment with some dummy podcast text and the possibili
   
 The result of this test was suprising, instead of choosing the best setting possible, she liked to always be able to change these settings.
 Because during the day the font could be 22px but when she was tired and for example in bed reading abit before sleeping she might as well be using a bigger font size. Also she mentioned darkmode to be a nice addition as well.
-
--- gif test 1
-
-
+  
+![test 1](https://user-images.githubusercontent.com/55492381/114010983-02248a00-9865-11eb-808e-e389e53a2df4.gif)  
+  
 ### Test 2: Simulating a podcast
 For this next test I was looking for a wow-factor, because just plain text but nicely designed was still just a bunch of text and you might as well read an article or an interview. I came up with an idea to simulate a podcast with text. My idea was to show dialogs over time so you would get the podcast feeling. I created a prototype with 2 tests. The first was showing dialogs over time, I created a basic timer of 5 seconds for each dialog to appear. But using this, I got the feeling I might as well use some interaction to show the dialogs because then Darice could just show the next dialog when she finished reading the previous one and there wasn't some automatic timer involved. I also though the interaction might be a nice addition because it would be totally different from reading a article or interview.  
   
 The result however was that the second test was totally not was she was looking for. It would be to much hassle to click your way through the podcast. So this part was failed, but gave me valuable information. Darice didn't want to be actively involved in the podcast.
 The result for the first test however was more positive. The idea of simulating a podcast was well received and I got some good feedback about the play and pause state. She also wanted an option to skip the whole podcast simulation and to show the whole transcription in one go. Also the scrolling was not working smooth on larger text dialogs and the animations for the speaker icons were distracting in the long run.
 
--- gif test 2
+![test 2](https://user-images.githubusercontent.com/55492381/114868297-0a953b80-9df6-11eb-856b-5dd79d80e9bf.gif)  
 
 ### Test 3: Nuances
 Instead of testing a better vesion of my simulated podcast I wanted to dive abit deeper in nuances. How can I show context she can't hear or read? For example silences during the podcast. Those arent usually in the transcript, but give context to the situation and Darice tolled me in an earlier meeting she wanted to see the mistakes made in speech in the transcripts. So the 'ehhssss' and the double words when someone is stuck in their talking progress. I though adding silences to the transcription would fit this though process. In this last prototype I created 4 test. The first two were variatons on how to show a short silence. The first where three animated dots, but Darice killed this one fairly quick because it reminded more on the animation when someone is typing. For the second test I created a thumble weed that rolled by to give a humoristic spin on showing a silince. This gave me a more positive result because Darice liked the concept but also let me know that I should also add the silince in as text.  
@@ -49,12 +44,12 @@ The third test was on a specific part of the podcast where Espen is 'suprised'. 
   
 The fourth and last test I did with Darice was about the speaker icons. I added a illustrated version of Vasilis and the idea was to let this icon talk when Vasilis was talking in the podcast. Later on I would be doing the same for Espen. This idea was very well received and if I got it to work, I was tolled it to be a great addition to the podcast. She also gave me the feedback here to combine this idea of the prototype of Stan where he let the words play on the audio file. So the background would get a color once the word had been said.   
   
--- gif test 3  
+![test 3](https://user-images.githubusercontent.com/55492381/115698270-babdf380-a364-11eb-8892-b26fb4f60453.gif)  
   
 
 
 
-## Exclusive design principles in my design
+## :candy: Exclusive design principles in my design
 
 ### Study situation
 The situation is, that Darice has lost her ability to hear audio. Simple said, she is deaf. But what does that actually mean?
@@ -82,7 +77,7 @@ Also I made a small easter egg in the font options. You can choose for serif or 
   
 Although it was difficult to come up with some cool nonsense, It was probably the most fun part to work on. I wanted to test this in the last test and I got some really positive feedback from Darice, which got me even more enthusiastic. For example I did a rush coarse on lip sync on Youtube to add animation to the speaker icons from Vasilis and Espen. When they are talking on the podcast, you will see their avatars talk as well. This was alot of manual work, but much fun. I had created different mouths for the avatars, and based on each words sound I changed which mouth is displaying. It really gave a finishing touch to the whole idea.
 
-## The final solution
+## :zap: The final solution
 ### Adding my own touch
 I wanted to stay close to the podcast simulation, but during all our tests I found that Darice prefered to see all of the podcast, instead of showing dialogs each at a time. But that didn't mean I had to drop this concept. Because of Stans test, I could very much use this test result for simulating a podcast. In this final product when you start the podcast, the audio podcast starts in the background, all words are highligted when spoken and words that have been spoken get a other highlight. This way you can see where you are in the podcast and what has been passed. You can pause the podcast as well and reset it if you like.
 
@@ -99,7 +94,7 @@ I am proud to present here my final design. I took a sample from the podcast 'He
 -- link to end product
 
 
-## Conclusion
+## :point_right: Conclusion / reflection
 Looking back at the past few weeks I never though exclusive design could bring so many great insights.
 I also experienced how hard it is to make a solution fit personally for someone and to drop your assumptions.
 Now and then I struggles with how big a solution I wanted to create. But thanks to the feedback sessions on the fridays I got guided to a better snapshot of a design solution than a less detailed but working for every podcast solution.
@@ -119,7 +114,7 @@ For the last test I had spend a lot less time on the prototype, but more on what
   
 Working in a team is also a very good way of testing. We all had our own tests, sometimes they where simular to anothers team members tests but that was okay. I learned a lot of the tests from other teammembers and even applied some in my own product. For future tests, it pays off to do it with group even if they are all on there own project.
 
-## Project status 
+## :muscle: Project status 
 * [x] Prototype 1: using font & sizes  
 * [x] Test report 1 added to Wiki
 * [x] Prototype 2: Simulating podcasting
@@ -151,11 +146,14 @@ Working in a team is also a very good way of testing. We all had our own tests, 
 Nice to have
 * [ ]  API to convert audio to JSON format
 
-## Lisence 
+## :lock: Lisence 
 [MIT](https://github.com/NathanNeelis/human-centered-design-2021/blob/master/LICENSE)    
 
 
-## Resources
+## :money_with_wings: Resources
+  
+[display array one at a time](https://stackoverflow.com/questions/51096633/display-elements-of-an-array-one-by-one-in-order-on-event-click)    
+[shades of darkmode](https://codeburst.io/50-shades-of-dark-mode-gray-d3e9907b1194)  
 [contains](https://www.javascripttutorial.net/dom/css/check-if-an-element-contains-a-class/)  
 [play audio](https://stackoverflow.com/questions/9419263/how-to-play-audio)  
 [scroll into view](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView)  
@@ -164,21 +162,3 @@ Nice to have
 [podcast Vasilis](https://webmaterials.design/posts/01-hello-world/)  
 [mouth shapes](https://www.freepik.com/vectors/education) Education vector created by pch.vector - www.freepik.com  
 [lip sync](https://www.youtube.com/watch?v=VKDMpZzhCp0)  
-
-<!-- Add a link to your live demo in Github Pages 🌐-->
-
-<!-- ☝️ replace this description with a description of your own work -->
-
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
-
-<!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
-
-<!-- Maybe a table of contents here? 📚 -->
-
-<!-- How about a section that describes how to install this project? 🤓 -->
-
-<!-- ...but how does one use this project? What are its features 🤔 -->
-
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
-
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
