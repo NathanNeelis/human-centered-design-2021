@@ -2,7 +2,7 @@
 
 ### View the app
 Here you find all links to each test environment and the final solution.  
-:earth_americas:  [live website](hhttps://nathanneelis.github.io/human-centered-design-2021/) 
+:earth_americas:  [live website](https://nathanneelis.github.io/human-centered-design-2021/)  
 
 ## Table of Contents  
 [Exclusive design](https://github.com/NathanNeelis/human-centered-design-2021#sparkles-exclusive-design)  
@@ -107,7 +107,7 @@ It was because of the creteria I took a closer look at how to add nonsense. For 
 ### Description
 I am proud to present here my final design. I took a sample from the podcast 'Hello world' from Vasilis and used this as content. It is about 40 seconds long, and represents how a other podcasts could be made as well. After all user test with Darice, which gave me valuable insights, I came up with a simulation of a podcast with the focus on text. Using this design solution, it (hopefully) really feels like a podcast and not just another article or interview. I added some personal touches for Darice which lifts this design from early stages to final concepting.
 
-:earth_americas:  [live website](hhttps://nathanneelis.github.io/human-centered-design-2021/eindproduct/eindproduct.html)   
+:earth_americas:  [live website](https://nathanneelis.github.io/human-centered-design-2021/eindproduct/eindproduct.html)   
 ![eindproduct](https://user-images.githubusercontent.com/55492381/115963509-e46f4a00-a51f-11eb-991d-312a155f36ad.gif)  
 
 ## :point_right: Conclusion / reflection
