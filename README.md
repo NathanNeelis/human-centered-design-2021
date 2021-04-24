@@ -123,7 +123,8 @@ I am proud to present here my final design. I took a sample from the podcast 'He
 ## :point_right: Conclusion / reflection
 Looking back at the past few weeks I never though exclusive design could bring so many great insights.
 I also experienced how hard it is to make a solution fit personally for someone and to drop your assumptions.
-Now and then I struggles with how big a solution I wanted to create. But thanks to the feedback sessions on the fridays I got guided to a better snapshot of a design solution than a less detailed but working for every podcast solution.
+Now and then I struggled with how big a solution I wanted to create. But thanks to the feedback sessions on the fridays I got guided to a better snapshot of a design solution than a less detailed but working for every podcast solution.  
+But I can conclude that my design solution wasn't posibble without testing with Darice and without the user tests of the others in this team.
 
 ### Goals
 In the transition of the first week to the second week I got the idea of creating a all in one solution for making podcasts accessible for Darice. 
