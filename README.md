@@ -16,6 +16,11 @@ Here you find all links to each test environment and the final solution.
 [License](https://github.com/NathanNeelis/human-centered-design-2021#lock-lisence)  
 [Resources](https://github.com/NathanNeelis/human-centered-design-2021#money_with_wings-resources)  
 
+## Additional test reports in wiki
+[Test report 1: Kennismaking](https://github.com/NathanNeelis/human-centered-design-2021/wiki/Kennismaking-&-testen)  
+[Test report 2: podcast experience 2.0](https://github.com/NathanNeelis/human-centered-design-2021/wiki/Testing-podcast-experience-2.0)  
+[Test report 3: podcast experience 3.0](https://github.com/NathanNeelis/human-centered-design-2021/wiki/Testing-podcast-experience-3.0)  
+
 
 ## :sparkles: Exclusive design
 Exclusive design is designing for the needs of a specific person. This person may have or may not have a disability to take into account. 
@@ -42,7 +47,9 @@ To make this typography as good as it could get I wanted to test her preference 
 I created a small test enviroment with some dummy podcast text and the possibility to adapt all the font options.  
   
 The result of this test was suprising, instead of choosing the best setting possible, she liked to always be able to change these settings.
-Because during the day the font could be 22px but when she was tired and for example in bed reading abit before sleeping she might as well be using a bigger font size. Also she mentioned darkmode to be a nice addition as well.
+Because during the day the font could be 22px but when she was tired and for example in bed reading abit before sleeping she might as well be using a bigger font size. Also she mentioned darkmode to be a nice addition as well.  
+  
+Read the test report: [Test report 1: Kennismaking](https://github.com/NathanNeelis/human-centered-design-2021/wiki/Kennismaking-&-testen)  
   
 ![test 1](https://user-images.githubusercontent.com/55492381/114010983-02248a00-9865-11eb-808e-e389e53a2df4.gif)  
   
@@ -51,7 +58,9 @@ For this next test I was looking for a wow-factor, because just plain text but n
   
 The result however was that the second test was totally not was she was looking for. It would be to much hassle to click your way through the podcast. So this part was failed, but gave me valuable information. Darice didn't want to be actively involved in the podcast.
 The result for the first test however was more positive. The idea of simulating a podcast was well received and I got some good feedback about the play and pause state. She also wanted an option to skip the whole podcast simulation and to show the whole transcription in one go. Also the scrolling was not working smooth on larger text dialogs and the animations for the speaker icons were distracting in the long run.
-
+  
+Read the test report: [Test report 2: podcast experience 2.0](https://github.com/NathanNeelis/human-centered-design-2021/wiki/Testing-podcast-experience-2.0)  
+  
 ![test 2](https://user-images.githubusercontent.com/55492381/114868297-0a953b80-9df6-11eb-856b-5dd79d80e9bf.gif)  
 
 ### Test 3: Nuances
@@ -61,9 +70,10 @@ The third test was on a specific part of the podcast where Espen is 'suprised'. 
   
 The fourth and last test I did with Darice was about the speaker icons. I added a illustrated version of Vasilis and the idea was to let this icon talk when Vasilis was talking in the podcast. Later on I would be doing the same for Espen. This idea was very well received and if I got it to work, I was tolled it to be a great addition to the podcast. She also gave me the feedback here to combine this idea of the prototype of Stan where he let the words play on the audio file. So the background would get a color once the word had been said.   
   
+Read the test report: [Test report 3: podcast experience 3.0](https://github.com/NathanNeelis/human-centered-design-2021/wiki/Testing-podcast-experience-3.0)  
+  
 ![test 3](https://user-images.githubusercontent.com/55492381/115698270-babdf380-a364-11eb-8892-b26fb4f60453.gif)  
   
-
 
 
 ## :candy: Exclusive design principles in my design
