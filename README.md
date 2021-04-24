@@ -1,5 +1,22 @@
 # Human Centered Design @cmda-minor-web 2021
 
+### View the app
+Here you find all links to each test environment and the final solution.  
+:earth_americas:  [live website](hhttps://nathanneelis.github.io/human-centered-design-2021/) 
+
+## Table of Contents  
+[Exclusive design](https://github.com/NathanNeelis/human-centered-design-2021#sparkles-exclusive-design)  
+[Assignment](https://github.com/NathanNeelis/human-centered-design-2021#speaker-assignment)  
+[User & Scenario](https://github.com/NathanNeelis/human-centered-design-2021#mute-darice--podcasts)  
+[Testing different solutions](https://github.com/NathanNeelis/human-centered-design-2021#mag-testing-different-solutions)  
+[Exclusive design principles](https://github.com/NathanNeelis/human-centered-design-2021#candy-exclusive-design-principles-in-my-design)  
+[The final solution](https://github.com/NathanNeelis/human-centered-design-2021#zap-the-final-solution)  
+[Conclusion / reflection](https://github.com/NathanNeelis/human-centered-design-2021#point_right-conclusion--reflection)  
+[Project status](https://github.com/NathanNeelis/human-centered-design-2021#muscle-project-status)  
+[License](https://github.com/NathanNeelis/human-centered-design-2021#lock-lisence)  
+[Resources](https://github.com/NathanNeelis/human-centered-design-2021#money_with_wings-resources)  
+
+
 ## :sparkles: Exclusive design
 Exclusive design is designing for the needs of a specific person. This person may have or may not have a disability to take into account. 
 In making an exclusive design you take a very close look at the person you are designing for, what obstacles does this person have in using a similar design / service. Exclusive design is person specific, a lot of people may have the same disability but the way they cope with is usually unique. This does not mean that what works for this specific person doesn't work for other people, but it doesnt mean it will either. To find out, simply test it! And thats what I'm going to do in this project.
@@ -90,9 +107,8 @@ It was because of the creteria I took a closer look at how to add nonsense. For 
 ### Description
 I am proud to present here my final design. I took a sample from the podcast 'Hello world' from Vasilis and used this as content. It is about 40 seconds long, and represents how a other podcasts could be made as well. After all user test with Darice, which gave me valuable insights, I came up with a simulation of a podcast with the focus on text. Using this design solution, it (hopefully) really feels like a podcast and not just another article or interview. I added some personal touches for Darice which lifts this design from early stages to final concepting.
 
--- gif or video end prodcut
--- link to end product
-
+:earth_americas:  [live website](hhttps://nathanneelis.github.io/human-centered-design-2021/eindproduct/eindproduct.html)   
+![eindproduct](https://user-images.githubusercontent.com/55492381/115963509-e46f4a00-a51f-11eb-991d-312a155f36ad.gif)  
 
 ## :point_right: Conclusion / reflection
 Looking back at the past few weeks I never though exclusive design could bring so many great insights.
