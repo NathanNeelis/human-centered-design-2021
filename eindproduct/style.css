@@ -4,10 +4,22 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'FriendsFont';
+    src: url('fonts/GabrielWeissFriendsFont.eot');
+    src: url('fonts/GabrielWeissFriendsFont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/GabrielWeissFriendsFont.woff2') format('woff2'),
+        url('fonts/GabrielWeissFriendsFont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 :root {
     --red: #D42D42;
     --darkblue: #2C4774;
-    --darkorange: #BD8E05;
+    --darkorange: #d48002;
     --darkgray: #333;
     --lightgray: #ebebeb;
 
@@ -16,7 +28,7 @@
 
     --fontRoboto: 'Roboto', sans-serif;
     --fontPlayFair: 'Playfair Display', serif;
-    --fontGloria: 'Gloria Hallelujah', cursive;
+    --fontGloria: 'FriendsFont', cursive;
 }
 
 html {
@@ -39,6 +51,7 @@ header {
     width: 100vw;
     transform: translateY(-15.5rem);
     transition: all .5s ease;
+    z-index: 300;
 }
 
 header.active {
