@@ -120,6 +120,39 @@ I am proud to present here my final design. I took a sample from the podcast 'He
 :earth_americas:  [live website](https://nathanneelis.github.io/human-centered-design-2021/eindproduct/eindproduct.html)   
 ![eindproduct](https://user-images.githubusercontent.com/55492381/115963509-e46f4a00-a51f-11eb-991d-312a155f36ad.gif)  
 
+### Data details
+For this solution I added each word in a span in a paragraph. Each span has data embedded in their classes and ID's. First the timing. Each span has an ID with a value of `tsxx.xxx`. My code checks the current time stamp of the audio file and the timestamp in the ID. It then highlights the current word and the words that have passed already. This why you can see where you are in the podcast.  
+  
+Another data variable are the speaker name and the lip sync class atributes. By adding the speaker name the javascript knows which icon is going to talk, by adding the lip sync class it updates the speakers mouth. Since this is done for each word, you will get a talking avatar.  
+  
+Here is an example of a paragraph:  
+```html
+                <p class="message message3">
+                    <span class='speakerV vasilis smile' id="ts10.900">Vasilis:</span>
+                    <span class="words vasilis neutral" id="ts11.000">Yeah, </span>
+                    <span class="words vasilis aei" id="ts11.200">I </span>
+                    <span class="words vasilis thl" id="ts11.400">think </span>
+                    <span class="words vasilis thl" id="ts11.600">that’s </span>
+                    <span class="words vasilis qw" id="ts11.800">what </span>
+                    <span class="words vasilis aei" id="ts12.000">we’re </span>
+                    <span class="words vasilis neutral" id="ts12.200">calling </span>
+                    <span class="words vasilis thl" id="ts12.400">it. </span>
+                    <span class="words vasilis smile" id="ts12.700"> </span>
+                </p>
+```
+
+So for this solution you will need the following data:
+* Time stamp of each word
+* Adding a speaker
+* Knowing which lip sync word you need to add.
+
+### Lip sync
+An extra bit of information of how I did this lip sync.  
+Your mouth makes certain shapes. In the svg avatar I added these shapes with an ID. When the javascript reads the class that refers to a mouth shape it updates this mouth shape in the avatar. Below here you will find a screenshot of a tutorial in YouTube that explained lip sync in After Effects. I applied this roughly in my code without using After Effects. The tutorial video is linked in the resources below.  
+  
+![lipsync](https://user-images.githubusercontent.com/55492381/116434004-50b4bb00-a84a-11eb-9516-4c39908e2a2e.png)
+
+
 ## :point_right: Conclusion / reflection
 Looking back at the past few weeks I never though exclusive design could bring so many great insights.
 I also experienced how hard it is to make a solution fit personally for someone and to drop your assumptions.
